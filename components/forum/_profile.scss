@@ -1,0 +1,169 @@
+// Primary: title, follow, avatar, stats
+.profilePrimary {
+  padding: 12px 20px 0 20px;
+
+  h1 {
+    border: 0;
+    margin: 0 0 4px;
+    padding: 0;
+    font-size: $font-size-large;
+    color: $tertiary-color;
+  }
+
+  .contentTop {
+    @include clearfix;
+    margin-bottom: 7px;
+
+    .usernameHolder {
+      float: left;
+    }
+
+    .userTitle {
+      float: left;
+      margin-left: 10px;
+      color: $color-tarbaby;
+      font-size: 13px;
+      line-height: 30px;
+    }
+  }
+
+
+  .avatarHolder {
+    float: left;
+  }
+
+  .right {
+    float: left;
+    margin-left: 20px;
+    width: 50%;
+    width: calc(100% - 129px);
+
+    .userTitle {
+      float: left;
+      margin-right: 19px;
+      color: $color-tarbaby;
+      font-size: 13px;
+    }
+  }
+
+
+  .profileWrapperStats {
+    margin-bottom: 20px;
+    margin-top: 0;
+    line-height: 26px;
+
+    li {
+      display: inline-block;
+      text-transform: capitalize;
+      width: 138px;
+
+      &:nth-child(odd) {
+        margin-right: 80px;
+      }
+    }
+
+    a {
+      font-weight: normal;
+    }
+
+    .profileAmount {
+      float: right;
+    }
+  }
+}
+//Follow
+
+.profile-buttons {
+  padding: 0 0 20px 20px;
+  border-bottom: 1px solid $border-thin-color;
+}
+
+.followHolderContainer {
+  text-align: right;
+  width: auto;
+
+  .followHolder {
+    display: inline-block;
+    margin-right: 7px;
+  }
+
+  .follow,
+  .sendMessage {
+    @include base-button;
+  }
+
+  .BTN,
+  .CTA {
+    height: 30px;
+    padding: 9px 10px;
+    font-size: 12px;
+    font-weight: normal;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.BTN.follow {
+  @include base-secondary-button($alternative:true);
+  float: left;
+  line-height: 38px;
+  margin-right: 0;
+  min-width: 150px;
+
+  &:hover {
+    line-height: 36px;
+  }
+}
+
+.following.CTA,
+.following.BTN {
+  @include base-secondary-button($alternative:true);
+  width: auto;
+  display: inline-block;
+
+  &:hover {
+    line-height: 36px;
+  }
+}
+
+.BTN.sendMessage {
+  @include base-primary-button($alternative:true);
+  float: left;
+  line-height: 38px;
+  margin-right: 10px;
+}
+
+.profileContainer .profileSecundary {
+  padding: 0 20px 10px 20px;
+  vertical-align: top;
+  margin: 20px 0;
+
+  .label {
+    width: 177px;
+    padding-right: 20px;
+    vertical-align: top;
+  }
+
+  .counter {
+    padding-bottom: 12px;
+    vertical-align: top;
+  }
+}
+
+.settingBlock.mySettings .content label {
+  width: 118px;
+}
+
+
+#more {
+  border-top: 1px solid $border-thin-color;
+  overflow: hidden;
+  padding: 18px 20px;
+
+  .BTN.more {
+    @include base-secondary-button;
+    float: right;
+  }
+}

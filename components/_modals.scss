@@ -1,0 +1,247 @@
+// Default Fancybox modal fixes
+#fancybox-overlay {
+  position: fixed;
+}
+
+#fancybox-close {
+  right: -32px;
+}
+
+#fancybox-content .container {
+  padding: 0;
+
+  &.loginRegister {
+    min-height: 330px;
+  }
+}
+
+.CTA.forgotPasswordBTN {
+  @include base-secondary-button;
+  margin-bottom: 10px;
+}
+
+// Login/Welcome/Report modal fixess
+#fancybox-content .loginRegister,
+#fancybox-content .welcomeActivation,
+#fancybox-content .reportPopup {
+  min-width: 100%;
+  width: 100%;
+
+  label {
+    width: 30%;
+  }
+
+.metaMessage,
+.welcomeActivation .metaMessage,
+.mailActivation .metaMessage {
+  margin: 5px 0;
+  font-style: normal;
+  font-size: $font-size-small;
+  color: $meta-font-color;
+  display: block;
+}
+
+  input[type='text'],
+  input[type='password'] {
+    width: 260px;
+    border: 1px solid $color-timberwolf;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .footerBlock {
+    font-size: $font-size-default;
+    color: $link-font-color;
+    border-color: $border-thin-color;
+    font-style: normal;
+  }
+
+  .terms,
+  .footerBlock a {
+    color: $link-font-color;
+
+    &:hover {
+      color: $link-font-color;
+    }
+  }
+
+  .select2-container {
+    margin-bottom: 10px;
+  }
+
+  // 'Forgot your password'?
+  #forgotPassLnk .fieldError.password:hover {
+      text-decoration: underline;
+  }
+
+  // Terms error
+  .metaMessage.fieldError.terms {
+    text-decoration: none;
+    margin: 10px 0;
+  }
+
+  // Remember login + Accept terms input
+  input[type="checkbox"] {
+    margin: 0 6px 0 0;
+  }
+  .rememberContent {
+    line-height: 1;
+  }
+  #remember {
+    margin-bottom: 10px;
+  }
+}
+
+.loginRegister .loginBTN,
+.rememberContent .CTA {
+  @include base-secondary-button;
+  float: right;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.logRegBlock {
+  border-top-color: $border-thin-color;
+}
+
+.loginRegister .label {
+  font-size: $font-size-small-plus;
+}
+
+.logRegBlock .item:last-child {
+  margin-bottom: 0;
+}
+
+// Editor Legend
+#fancybox-content .legendHolder {
+  max-width: 620px;
+  width: 100%;
+
+  // Modal spoiler checkbox fix
+  .bb-spoiler-container > label.bb-spoiler-head-hide{
+    display: none;
+  }
+  .bb-spoiler-container > label.bb-spoiler-head-show {
+    display: block;
+  }
+  .bb-spoiler-container > input[type=checkbox]:checked ~ .bb-spoiler-head-show{
+    display: none;
+  }
+  .bb-spoiler-container > input[type=checkbox]:checked ~ .bb-spoiler-head-hide{
+    display: block;
+  }
+
+  h2  {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 49%;
+  }
+}
+
+.forgotPasswordBox .label,
+.forgotPasswordBox .content {
+  float: none;
+  margin-bottom: 10px;
+  width: 100%;
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+#fancybox-content .loginRegister .footerBlock {
+  color: $color-grey-medium;
+  margin-top: 10px;
+}
+
+// Report popup
+.reportPopup {
+
+  .reportMessageHolder {
+    border: none;
+  }
+
+  .label,
+  .content {
+    color: $tertiary-color;
+  }
+
+  h2 {
+    font-family: $font-family-bold;
+    color: $tertiary-color;
+    margin: 10px 10px 20px 10px;
+  }
+
+  .reportMessage {
+    border: 1px solid $border-thin-color;
+    font-size: $font-size-default;
+    resize: vertical;
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .reportBox {
+    margin: 0 10px;
+  }
+
+  .CTA.reportBTN {
+    @include base-secondary-button($alternative:true);
+    float: right;
+    margin-top: 10px;
+  }
+}
+
+
+//Facebook login
+.facebookBTN {
+  font-size: $font-size-small;
+  padding-top: 6px;
+  height: 33px;
+  width: 200px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.loginRegister .label,
+.welcomeActivation .label,
+.mailActivation .label {
+  white-space: nowrap;
+}
+
+.loginRegister .label {
+  width: 35%;
+}
+
+#fancybox-content .loginRegister .content {
+  width: 65%;
+}
+
+body .restorePasswordBox .content {
+  float: left;
+}
+
+.restorePasswordBox {
+  padding-bottom: 30px;
+
+  h2 {
+    float: left;
+    width: 100%;
+  }
+
+  .CTA {
+    margin-top: 10px;
+  }
+}

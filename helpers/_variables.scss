@@ -1,0 +1,122 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Relative paths
+//
+//## Paths are based on the shared/app folder structure
+$assets                     : "../../dist/" !default;
+$fonts                      : "../../dist/fonts/" !default;
+
+
+
+// Knab Bank colours
+$color-white                : #fff;
+$color-black                : #000;
+$color-dove                 : #666;
+$color-tarbaby              : #909090;
+$color-athens               : #f0f2f6;
+$color-pampas               : #efe9e4;
+$color-wheat                : #f5f3f1;
+$color-bisque               : #f5f3f1;
+$color-timberwolf           : #d7d2cb;
+$color-chateau              : #a7aeb5;
+$color-silver               : #b2b2b2;
+$color-black-haze           : #fafbfb;
+$color-cloudy-weather       : #d5d7db;
+
+$color-pearl                : #04202e; //dark blue
+$color-river-bed            : #3e4a59; //dusty blue
+$color-ship-cove            : #6a8cbd; //powder blue
+$color-carnation            : #e14c68; //light red
+$color-crimson              : #e2333f; //dark red
+$color-beetroot             : #e86068; //error red
+
+$color-persian              : #00b1ac; //green
+$color-ocean                : #29897c; //light green
+$color-grey-medium          : #444444;
+
+// Knab Bank base colours
+$primary-color             : $color-carnation;
+$secondary-color           : $color-persian;
+$tertiary-color            : $color-pearl;
+
+// Fonts
+$font-family               : 'PT Sans', arial, helvetica, sans-serif;
+$font-family-bold          : 'IntroBoldCaps', IntroBoldCaps, arial, helvetica, sans-serif;
+$font-family-form          : helvetica, sans-serif;
+
+// Site widths
+$left-width                : 700px;
+$gap-width                 : 20px;
+$right-width               : 240px;
+$site-width                : $left-width + $gap-width + $right-width;
+
+// Text
+$font-size-extra-small     : 11px;
+$font-size-small           : 12px;
+$font-size-small-plus      : 13px;
+$font-size-medium          : 14px;
+$font-size-mid             : 16px;
+$font-size-large           : 18px;
+$font-lineheight           : 20px;
+$font-size-default         : $font-size-medium;
+$font-size-h1              : 24px !default;
+$font-size-h2              : $font-size-large !default;
+$font-size-h3              : $font-size-default !default;
+
+// Text colours
+$font-color-default        : $tertiary-color;
+$link-font-color           : $primary-color;
+$link-font-color-hover     : $primary-color;
+$meta-font-color           : $color-dove;
+
+
+// Borders
+$border-width-thin         : 1px;
+$border-width-thick        : 2px;
+$border-thin-color         : $color-athens;
+$border-thick-color        : $color-pampas;
+$border-radius             : 0;
+$border-color              : $border-thin-color;
+$border-style              : solid;
+
+
+//Buttons
+$button-border             : false !default;
+$button-border-color       : $border-color !default;
+$button-radius             : $border-radius !default;
+$button-style              : $border-style !default;
+$button-shadow             : false !default;
+$button-border-width       : $border-width-thin !default;
+$button-weight             : normal !default;
+$button-display            : inline-block !default;
+$button-text-align         : center !default;
+$button-disabled           : 0.3 !default;
+$button-font-color         : $color-white;
+$primary-button-bg         : $primary-color;
+$primary-button-bg-hover   : $color-crimson;
+$secondary-button-bg       : $secondary-color;
+$secondary-button-bg-hover : $color-ocean;
+$tertiary-button-bg        : $color-pearl;
+$tertiary-button-bg-hover  : $color-persian;
+$cursor-value              : pointer !default;
+
+// Input fields
+$input-font-color          : $tertiary-color;
+$input-placeholder-color   : $color-chateau;
+$input-border-color        : $color-athens;
+$placeholder-color         : $tertiary-color;
+
+// Z Index
+$zindex-small              : 10;
+$zindex-medium             : 20;
+$zindex-max                : 9999;
+
+
+/// A global setting to enable or disable the `$asset-pipeline` variable for all functions that accept it.
+///
+/// @type Bool
+
+$asset-pipeline            : false !default;

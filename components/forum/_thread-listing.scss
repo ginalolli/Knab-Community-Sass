@@ -1,0 +1,175 @@
+.threadListingBoxHeader {
+  border-bottom: none;
+}
+
+.sortingHeader {
+  height: 45px;
+  padding: 5px 20px;
+  background: $tertiary-color;
+
+  .results {
+    @extend %h3;
+    line-height: 28px;
+    color: $color-white;
+    font-size: $font-size-large;
+    margin-left: 0;
+
+    .unreadPostCounterSingleTopic a {
+      color: $color-white;
+    }
+
+    p {
+      font-family: $font-family-bold;
+      font-size: $font-size-large;
+      line-height: 28px;
+      color: $color-white;
+    }
+  }
+}
+
+.threadListing {
+  border-bottom: none;
+}
+
+.threadListingBoxHeader .sortButtons {
+
+  a {
+    border: 2px solid $secondary-color;
+    background-color: $tertiary-color;
+    border-radius: $border-radius;
+    font-size: $font-size-default;
+    color: $color-white;
+
+    &.active,
+    &:hover {
+      background-color: $secondary-color;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+}
+
+.thread {
+  border-bottom-color: $border-thin-color;
+
+  .threadUserInfo {
+    padding: 19px 0 0 22px;
+    width: 262px;
+
+    .left {
+
+      .avatarHolder {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .usernameHolder {
+      margin-bottom: 3px;
+    }
+
+    .right {
+      width: 123px;
+      font-size: $font-size-default;
+
+      .userLevelHolder {
+        margin-top: 3px;
+      }
+    }
+
+    .right span.userTitle,
+    .right span.userreactions {
+      color: $meta-font-color;
+    }
+  }
+}
+
+.right span.userTitle {
+  display: inline-block;
+}
+
+// User level
+.userLevel {
+  background-image: url("#{$assets}images/sprite_reputation.png");
+  height: 13px;
+  width: 13px;
+
+  &.level0 {
+    background-position: -3px -5px;
+  }
+  &.level1 {
+    background-position: -3px -25px;
+  }
+  &.level2 {
+    background-position: -3px -45px;
+  }
+  &.level3 {
+    background-position: -3px -65px;
+  }
+  &.level4,
+  &.level5{
+    background-position: -3px -85px;
+  }
+}
+
+.thread .threaduserLabel.answer {
+  background-color: $secondary-color;
+}
+
+.even {
+  background-color: $color-white;
+}
+
+
+//Modbreak
+.modbreak {
+  margin: 5px;
+  border: 2px solid $tertiary-color;
+
+  .modbreakLabel {
+    padding: 1px 10px 0 10px;
+    display: block;
+    float: right;
+    background-color: $tertiary-color;
+    color: $color-white;
+    font-size: $font-size-extra-small;
+  }
+}
+
+//BB Code
+.bb-spoiler-container {
+  background-color: $color-wheat;
+
+  .bb-spoiler-head-show,
+  .bb-spoiler-head-hide {
+    color: $link-font-color;
+  }
+}
+
+.threadAnswer .bb-spoiler-container {
+  padding: 0;
+}
+
+
+.threadQuote {
+  font-style: normal;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: $color-white;
+  border-left-color: $tertiary-color;
+
+  b {
+    text-transform: uppercase;
+  }
+}
+
+.threadCode {
+  background-color: $color-wheat;
+}
+
+
+.threadElements ul li {
+  list-style-position: outside;
+  margin-left: 15px;
+}

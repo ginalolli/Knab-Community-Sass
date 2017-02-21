@@ -1,0 +1,56 @@
+.conversationEditor {
+  padding: 0;
+  border-top: 1px solid $border-thin-color;
+}
+.conversationEditor img.avatar60 {
+    height: 50px;
+    width: 50px;
+}
+
+.chatbox .titleHeader {
+  border: none;
+}
+
+.firstMessage {
+  padding: 0 20px 10px 20px;
+  text-align: left;
+  border-bottom-color: $border-thin-color;
+}
+
+.conversationEditor .editor_container .editorHolder .editor .editorContent {
+  border-bottom: 1px solid $border-thin-color;
+  border-radius: $border-radius !important;
+}
+
+.conversationHolder {
+
+  .message {
+    border-bottom-color: $border-thin-color;
+    padding: 20px;
+  }
+}
+
+.conversationEditor {
+  border-top: none;
+}
+.pmOverview ul {
+  border-top-color: $border-thin-color;
+}
+.message {
+  padding: 20px;
+  border-bottom-color: $border-thin-color;
+}
+
+.followerInfo h4 {
+  color: $tertiary-color;
+}
+
+.messageContent .time {
+  top: 2px;
+  color: $meta-font-color;
+  font-weight: normal;
+}
+
+.messageStream {
+  min-height: auto;
+}

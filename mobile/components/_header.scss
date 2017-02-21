@@ -1,0 +1,52 @@
+header {
+  background-color: $color-white;
+  background-image: none;
+
+  .menu_open & {
+      position: fixed;
+  }
+
+  #logo {
+    background: url('#{$assets}images/mobile/logo@2x.png') no-repeat;
+    background-color: $color-white;
+    background-size: 50px 16px;
+    height: 16px;
+    width: 50px;
+    left: 20px;
+    top: 13px;
+  }
+
+  .btn.blue.new,
+  .btn.blue.new:focus,
+  .btn.blue.new:hover,
+  .btn.blue.new:active {
+    border: none;
+    background: url('#{$assets}images/mobile/new@2x.png') no-repeat;
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 62px;
+    top: 12px;
+    text-indent: -9999px;
+    text-shadow: none;
+    padding: 0;
+    border-radius: $border-radius;
+  }
+}
+
+
+header .headerLink.menuLink,
+header .headerLink.menuLink:focus,
+header .headerLink.menuLink:active {
+  background: url('#{$assets}images/mobile/menu@2x.png') no-repeat;
+  background-color: $color-white;
+  background-size: 24px 16px;
+  border-right: 0;
+  box-shadow: none;
+  width: 24px;
+  height: 16px;
+  right: 20px;
+  top: 13px;
+  left: auto;
+}

@@ -1,0 +1,175 @@
+// New topic page
+.baseLink {
+  display: none;
+}
+
+.create_topic {
+  margin-bottom: 20px;
+}
+
+.thread_new .editor {
+  position: relative;
+}
+
+#newTopic.display.titleHead {
+  background-color: $color-white;
+  margin-bottom: 0;
+  padding-top: 5pxpx;
+
+  h1 {
+    color: $color-river-bed;
+    font-size: $font-size-large;
+    line-height: 0;
+    padding-left: 20px;
+    height: 36px;
+  }
+
+  .subscribeBox {
+    top: 12px;
+    background: $color-white;
+
+    .profile.BTN {
+      background-color: $color-white;
+      color: $link-font-color;
+      font-size: $font-size-default;
+      line-height: 33px;
+    }
+  }
+}
+
+.editor_container {
+  background-color: $color-white;
+}
+
+// Tags
+.editor_container {
+
+  .tagsHolder {
+    width: 806px;
+  }
+
+  .tagDesc {
+    width: 43px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .editorTags {
+    width: 80%;
+    width: calc(100% - 70px);
+    max-width: none;
+    margin: 1px 0 0;
+
+    span.tag {
+      background-image: none;
+      border: none;
+      cursor: pointer;
+      font-weight: normal;
+      height: 28px;
+      color: $link-font-color;
+      line-height: 1;
+      margin: 0;
+      padding: 12px 6px 6px 0;
+      text-transform: capitalize;
+
+      &.editorBTN {
+        background-color: $color-white;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .inputTag input {
+      @include base-text-input;
+      @include placeholder;
+      border: 1px solid $border-thin-color;
+      height: 35px;
+    }
+
+    .comma {
+      color: $tertiary-color;
+      display: inline-block !important;
+    }
+
+    // Edit tags btn
+    .changeTags {
+      color: $tertiary-color;
+      background-color: $color-wheat;
+      background-image: none;
+      margin: 0 0 10px 10px;
+      height: 20px;
+      width: 20px;
+      text-indent: 0;
+
+      &:before {
+        @include insided-icon;
+        padding: 4px;
+        content: $insided-icon-01;
+        font-size: 13px;
+        display: inline-block;
+        color: $tertiary-color;
+      }
+
+      &:hover {
+        color: $tertiary-color;
+        background-color: $color-wheat;
+      }
+    }
+
+
+    // Add new tag btn
+    span.addTag {
+
+        @include base-secondary-button;
+        text-transform: none;
+        text-indent: 0;
+        width: auto;
+        height: 35px;
+        padding: 4px 10px;
+        line-height: 28px;
+        font-size: $font-size-mid;
+
+        &:hover {
+          text-transform: none;
+          width: auto;
+          height: 35px;
+          padding: 4px 10px;
+          line-height: 28px;
+          font-size: $font-size-mid;
+        }
+    }
+
+    // Save new tags btn
+    #saveTags {
+      display: none;
+    }
+  }
+}
+
+.create_topic .editorHolder .editor .editorContent {
+  border-bottom: 1px solid $border-thin-color;
+}
+.editor_container .thread_new .editorTitle {
+  margin-bottom: 0;
+}
+.thread_new.editorHolder .editorAdds {
+  border-top: none;
+  margin-bottom: 10px;
+}
+
+.thread_new .select2-container {
+  width: 156px;
+
+  .select2-choice span {
+    color: $tertiary-color;
+  }
+}
+
+.messageSubjectLabel {
+  border: 1px solid $border-thin-color;
+  border-width: 0 1px;
+  display: block;
+  padding: 10px 0 10px 13px;
+}

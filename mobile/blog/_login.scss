@@ -1,0 +1,17 @@
+input[type="text"],
+input[type="password"] {
+  @include base-text-input;
+}
+
+.btn.loginBTN {
+  &,
+  &:focus,
+  &:active {
+    line-height: 37px;
+  }
+}
+
+.facebookBTN.link {
+  color: $color-white;
+  padding-top: 5px;
+}

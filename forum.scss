@@ -1,0 +1,12 @@
+@import "main";
+
+// All small components/modules are found in the components folder
+@import "components/forum/index-overview",
+        "components/forum/topic-first-post",
+        "components/forum/thread-listing",
+        "components/forum/editor",
+        "components/forum/create-new",
+        "components/forum/profile",
+        "components/forum/activities",
+        "components/forum/forum-overview",
+        "components/forum/highlighted-widgets";

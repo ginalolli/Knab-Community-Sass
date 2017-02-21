@@ -1,0 +1,28 @@
+// Redefine assets for mobile
+$assets: "../../" !default;
+$fonts: "../../fonts/" !default;
+
+@import "mobile/refactored.scss";
+
+@import "helpers/variables",
+        "helpers/createfont",
+        "helpers/functions",
+        "helpers/mixins";
+
+// Reset CSS and get basic typography
+@import
+        "base/typography";
+
+@import "mobile/components/nav",
+        "mobile/components/notifications",
+        "mobile/components/search",
+        "mobile/forum/profile",
+        "mobile/components/knab-cookie";
+
+@import
+        "mobile/blog/overview",
+        "mobile/blog/nav",
+        "mobile/blog/header",
+        "mobile/blog/buttons",
+        "mobile/blog/login",
+        "mobile/blog/view";

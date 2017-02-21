@@ -1,0 +1,22 @@
+input[type="search"],
+input[type="password"],
+input[type="text"],
+input[type="email"] {
+  @include base-text-input;
+  @include placeholder {
+    font-style: normal !important; // needs important to override
+    color: $placeholder-color !important;
+    opacity: 1 !important;
+    font-size: $font-size-default;
+  }
+}
+
+textarea {
+  @include base-textarea;
+  @include placeholder {
+    font-style: normal !important; // needs important to override
+    color: $placeholder-color !important;
+    opacity: 1 !important;
+    font-size: $font-size-default;
+  }
+}

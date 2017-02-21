@@ -1,0 +1,42 @@
+.cookie-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 55px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+    p {
+        color: #fff;
+        margin: 0;
+    }
+    a {
+        color: #e86068;
+    }
+}
+.cookie-notice.hidden {
+  display: none;
+}
+.cookie-notice-close {
+  background: url(https://www.knab.nl/knab/content/knab/images/close.png) no-repeat 0 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  margin-top: -12px;
+  text-decoration: underline;
+  text-indent: -5555px;
+}
+@media (max-width: 992px) {
+  .cookie-notice {
+      padding-left: 20px;
+  }
+  .cookie-notice p {
+      font-size: 12px;
+  }
+}

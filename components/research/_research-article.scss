@@ -1,0 +1,726 @@
+h3, h4 {
+  color: $tertiary-color;
+}
+
+.contentLeft {
+  width: 700px;
+  margin: 0;
+  padding-right: 0;
+}
+
+.research-post .post,
+.research-post .comments {
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  padding: 20px;
+}
+
+.research-post {
+
+  .thumbnail {
+    // height: 366px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .post {
+    position: relative;
+    padding: 20px 120px 20px 20px;
+
+    h1.post_title {
+      color: $tertiary-color;
+      padding-bottom: 0;
+      border-bottom: 0;
+      font-size: $font-size-large;
+      text-shadow: none;
+      max-width: 90%;
+    }
+
+    .publictags {
+      border-top: 1px solid $color-cloudy-weather;
+      padding-right: 0;
+      padding: 20px 0;
+      text-align: left;
+
+      a {
+        color: $link-font-color;
+      }
+    }
+
+    .post_metadata {
+      margin-bottom: 5px;
+      color: $color-silver;
+      font-size: $font-size-medium;
+
+      a {
+        cursor: pointer;
+      }
+
+      span.date_added {
+        color: $color-silver;
+      }
+
+      a.number_comments,
+      a.number_comments:hover {
+        color: $link-font-color;
+        text-decoration: none;
+      }
+    }
+
+    .post_content {
+      color: $tertiary-color;
+
+      a {
+        color: $link-font-color;
+      }
+
+      .threadQuote {
+        font-style: normal;
+        background-color: $color-white;
+        border-left: 2px solid $tertiary-color;
+        font-family: $font-family;
+        margin-bottom: 10px;
+        padding: 2px 20px;
+
+        p {
+          font-size: $font-size-medium
+        }
+      }
+    }
+  }
+
+  .research-item.research-introduction ul,
+  .research-item.research-introduction ol {
+    margin-left: 15px;
+
+    li {
+      list-style-position: inherit;
+    }
+  }
+
+  .research-item {
+    margin-top: 0;
+
+    h2 {
+      color: $tertiary-color;
+      margin-bottom: 5px;
+    }
+  }
+
+  .videoWrapper {
+    margin: 20px 0;
+  }
+}
+
+//Comments
+.research-post .comments {
+  padding: 0;
+
+  h1 {
+
+    padding: 10px 20px;
+    color: $color-white;
+    background-color: $tertiary-color;
+    font-size: $font-size-large;
+    margin-left: 0;
+  }
+
+  .post-comments-content.editor {
+    padding: 20px 20px 70px 20px;
+  }
+
+  .post-comments-content {
+    margin-bottom: 20px;
+    padding: 20px 20px 0 20px;
+
+    .editor .comment-form input.publish {
+      text-shadow: none;
+      box-shadow: none;
+      float: right;
+      margin-top: 10px;
+      @include base-secondary-button;
+    }
+
+    h1 {
+        color: $tertiary-color;
+        background-color: transparent;
+        border: none;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    h2 {
+      color: $tertiary-color;
+    }
+
+    .comment {
+      border: 0;
+
+      .profile-info b {
+        text-transform: uppercase;
+        color: $color-pearl;
+      }
+
+      .profile-avatar {
+        padding: 0;
+        border: 0;
+        width: 50px;
+        height: 50px;
+      }
+
+      .profile-comment {
+        width: 580px;
+        color: $tertiary-color;
+      }
+
+      .profile-info {
+        color: $color-silver;
+      }
+
+      .profile-comment .reply a {
+
+        &, &:hover {
+          padding-left: 30px;
+          color: $link-font-color;
+          font-style: normal;
+          @include base-sprite(-12px,-370px);
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+//Editor
+.textEditorContainer .editorHolder {
+
+  .editorAdds {
+    background: $color-white;
+    border: none;
+    border-radius: $border-radius;
+    min-height: 57px;
+    padding: 10px 0;
+    margin-bottom: 0;
+    width: 50%;
+    float: left;
+
+    .attachment_buttons {
+      float: left;
+    }
+
+    .addRight {
+      float: none;
+    }
+
+    .addLeft .BTN-GROUP,
+    .addRight .BTN-GROUP {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .addLeft .BTN-GROUP .editorBTN,
+    .addRight .BTN-GROUP .editorBTN {
+      margin: 0 2px 0 0;
+      border-radius: 0;
+    }
+
+    .editorBTN {
+      background: $color-timberwolf;
+      border: 0;
+      border-radius: $border-radius;
+      height: 45px;
+      min-width: 58px;
+      max-width: none;
+      width: auto;
+
+      div {
+        position: relative;
+        color: $tertiary-color;
+      }
+
+      &:hover,
+      &:active {
+        background: $primary-color;
+      }
+    }
+
+    .editorBTN div:hover,
+    .editorBTN div:hover:after {
+      color: white;
+    }
+
+    .addImage,
+    .addPoll,
+    .addVideo,
+    .addBB,
+    .addSmiley {
+      min-width: 50px;
+      max-width: none;
+      width: auto;
+      background: none;
+      text-indent: 0;
+      height: 35px;
+      line-height: 32px;
+      text-align: center;
+      text-shadow: none;
+
+      &:after {
+        display: inline;
+        color: $tertiary-color;
+        line-height: 1;
+        position: relative;
+        top: 6px;
+        font-size: $font-size-large;
+        vertical-align: middle;
+        @include insided-icon;
+      }
+    }
+
+    .addImage span,
+    .addVideo span {
+      position: relative;
+      color: $tertiary-color;
+      padding: 2px 7px 0 0;
+      float: right;
+      line-height: 43px;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    #btn_add_image div:after {
+      content: $insided-icon-05;
+      font-size: 20px;
+    }
+    #btn_add_video div:after {
+      content: $insided-icon-06;
+      font-size: 20px;
+    }
+    .addSmiley:after {
+      content: $insided-icon-07;
+      font-size: 20px;
+    }
+    .addBB:after {
+      content: $insided-icon-08;
+    }
+
+  }
+
+  .editor .editorContent {
+    border-bottom: 1px solid $input-border-color;
+    @include base-textarea;
+  }
+}
+
+// Add images/video input
+.textEditorContainer .editorHolder .adds {
+  border-color: $input-border-color;
+  border-top: 0;
+  border-bottom: 1px solid $color-athens;
+
+  .imageUploader {
+    border-top: none;
+    padding: 20px;
+  }
+
+  // Image
+  #form_add_image .fileInputholder {
+    height: 35px;
+  }
+
+  #form_add_image .fileInputholder .fakeInput {
+    @include base-text-input;
+    border: 1px solid $border-thin-color;
+    width: 386px;
+    height: 35px;
+  }
+
+  #form_add_image .fileInputholder .browseimage,
+  #form_add_image .fileInputholder .browseimage:hover {
+    @include base-secondary-button($alternative:true);
+    padding:0 19px !important;
+    float: right;
+  }
+
+  // Add attachment text
+  .mediaHolder .mediaConnect .addToText {
+    line-height: $font-lineheight;
+  }
+
+}
+
+
+.textEditorContainer .editorHolder .attachments {
+
+  .editor_videoInput {
+    @include base-text-input;
+    height: 36px;
+  }
+
+  .CTA {
+    @include base-secondary-button($alternative: true);
+  }
+}
+
+
+
+.view-divider {
+  display: block;
+  height: 20px;
+  background-color: $color-bisque;
+}
+
+// Add Smiley
+.editorHolder .smileyPopup {
+  margin-right: 0;
+
+  .popupInfo {
+    border-radius: $border-radius;
+  }
+}
+
+// Add right
+.addRight {
+  vertical-align: middle;
+  line-height: 35px;
+}
+
+
+.research-post .comments .post-comments-content .comment .profile-comment .threadQuote  {
+  font-style: normal;
+  background-color: $color-white;
+  border-left: 2px solid $tertiary-color;
+  font-family: $font-family;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  b {
+    text-transform: uppercase;
+    color: $tertiary-color;
+  }
+}
+
+
+//Research items
+.research-item {
+  margin-bottom: 20px;
+
+  p.optionReqMsq {
+    margin-bottom: 15px;
+    font-style: normal;
+    color: $color-silver;
+    font-size: $font-size-medium;
+  }
+}
+
+//Thumbs
+.research-item.research-thumbs {
+
+  .thumbs {
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    .button {
+      line-height: 15px !important;
+      text-transform: capitalize !important;
+      font-weight: normal !important;
+      color: $color-white !important; //needed to override default css
+      @include base-tertiary-button;
+
+      &:hover {
+        padding: 0px 15px;
+        line-height: 35px !important;
+      }
+    }
+
+    .button.selected,
+    span.pick {
+      @include base-secondary-button(true);
+    }
+
+    .button.selected,
+    span.pick {
+      padding: 0;
+      line-height: 35px !important;
+
+      &:hover {
+        padding: 0;
+      }
+    }
+
+    span.button {
+      padding: 0;
+      line-height: 35px !important;
+    }
+  }
+
+  //Results
+  .results {
+    padding-left: 0;
+    margin-top: 30px;
+
+    .results-holder {
+      margin-bottom: 10px;
+      float: none;
+      width: 100%;
+      font-size: $font-size-medium;
+      text-align: left;
+
+      .bar {
+        border-radius: 0;
+        background-color: $color-bisque;
+
+        .score {
+          background-color: $secondary-color;
+          border-radius: 0;
+        }
+      }
+
+      .label {
+        text-align: left;
+        color: $tertiary-color;
+      }
+
+      .votes {
+        text-align: right;
+        float: right;
+        color: $color-silver;
+      }
+    }
+  }
+}
+.research-results.research-thumbs .results .results-holder ul li:first-child {
+  margin-bottom: 0;
+}
+.research-item.research-results .results .results-holder .label {
+  font-style: italic;
+  margin-bottom: 0;
+  line-height: 30px;
+
+  label {
+    margin-bottom: 0;
+  }
+}
+
+//Drag and drop
+.research-item.research-dragdrop {
+
+  ul {
+    background: none;
+    padding-top: 0px;
+  }
+
+  ul ul {
+    width: 270px;
+  }
+
+  li.item {
+    padding: 9px 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    border: 0;
+    background: $color-bisque;
+    color: $tertiary-color;
+    box-shadow: none;
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  li.item.ui-sortable-helper {
+    height: 40px !important;
+  }
+
+  li .dragdrop-highlight {
+    height: 40px !important;
+  }
+
+  li {
+
+    .dragdropLeft {
+      left: 0;
+      border: 1px solid $color-cloudy-weather;
+      background: $color-white;
+    }
+
+    .dragdropRight {
+      border: 1px solid $color-cloudy-weather;
+      background: $color-white;
+      right: 0;
+    }
+
+    .dragdropMsg {
+      right: 28px;
+      color: $color-silver;
+    }
+  }
+}
+
+
+//Drag drop results.
+.research-results.research-dragdrop {
+
+  .resultsContent {
+    padding: 10px 10px 0 0;
+    width: 270px;
+    float: left;
+
+    .border {
+      margin-top: 5px;
+      padding: 10px;
+      overflow: hidden;
+      border: 1px solid $color-cloudy-weather;
+    }
+  }
+
+  label {
+    font-size: $font-size-mid;
+  }
+
+  ul {
+    padding-top: 0;
+    left: 0;
+
+    li {
+      background-color: $color-bisque;
+
+      &.item {
+        padding: 7px 10px;
+        border-radius: 0;
+        font-size: $font-size-medium;
+        color: $tertiary-color
+      }
+
+      &.selected {
+        color: $color-white;
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+
+//Radio + checkboxes
+.research-item.research-radiobutton,
+.research-item.research-checkbox {
+
+  .results-holder {
+
+    ul li {
+      width: 100%;
+    }
+    ul li.bar {
+      width: 100%;
+    }
+
+    ul li.lastChild {
+      margin-left: 0;
+    }
+  }
+
+  .bar {
+    border-radius: 0;
+  }
+
+  .bar .score {
+    border-radius: 0;
+    background-color: $secondary-color;
+  }
+
+  .results {
+    padding-left: 0;
+    color: $tertiary-color;
+    font-weight: normal;
+    font-size: $font-size-medium;
+  }
+
+  .label label {
+    display: inline-block;
+  }
+
+  label {
+    cursor: pointer;
+    line-height: 20px;
+    text-align: left;
+    font-weight: normal;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    input {
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  .results-holder label {
+    padding-left: 0;
+  }
+
+  .votes {
+    line-height: 30px;
+    float: right;
+    color: $color-silver;
+  }
+
+  input {
+    margin-right: 6px;
+  }
+}
+
+//Submit research
+.submit-research {
+  border-top: 0;
+  text-align: left;
+
+  .BTN.CTA {
+    @include base-secondary-button(true);
+  }
+}
+
+
+// User level
+.userLevel {
+  background-image: url("#{$assets}images/sprite_reputation.png");
+  height: 13px;
+  width: 13px;
+
+  &.level0 {
+    background-position: -3px -5px;
+  }
+  &.level1 {
+    background-position: -3px -25px;
+  }
+  &.level2 {
+    background-position: -3px -45px;
+  }
+  &.level3 {
+    background-position: -3px -65px;
+  }
+  &.level4,
+  &.level5{
+    background-position: -3px -85px;
+  }
+}
+
+// Share
+.share_box_holder.default {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.labelOptionReq {
+  display: none;
+}

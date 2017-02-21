@@ -1,0 +1,149 @@
+h1 {
+  color: $tertiary-color;
+  font-size: $font-size-large;
+}
+
+h2, h3 {
+  color: $tertiary-color;
+  font-size: $font-size-default;
+  margin-bottom: 10px;
+}
+
+#pageTitle {
+  border-top: none;
+  color: $tertiary-color;
+  box-shadow: none;
+
+  h1 {
+    color: $tertiary-color;
+  }
+}
+
+#pageContent {
+
+  .thumbnail {
+    &, img {
+      width: 100%;
+    }
+  }
+
+  #pageTitle {
+    border-top: none;
+    color: $tertiary-color;
+
+    h1 {
+      color: $tertiary-color;
+      word-wrap: break-word;
+    }
+  }
+
+  .post-content {
+    padding: 10px;
+    color: $tertiary-color;
+    font-size: $font-size-default;
+
+    .content {
+      color: $tertiary-color;
+    }
+
+    .post_author {
+      display: inline-block;
+    }
+  }
+
+  .post_medatada .num-comments {
+    color: $link-font-color;
+    padding-left: 0;
+  }
+}
+
+//comments
+.comments {
+
+  .comments_control {
+    background-color: $tertiary-color;
+    border: none;
+    padding: 10px 20px;
+
+    .comments_count {
+      color: $color-white;
+      font-family: $font-family-bold;
+      font-size: $font-size-default;
+      text-transform: uppercase;
+    }
+
+    span.btn {
+      line-height: 18px;
+    }
+  }
+
+  .comment .profile-info .avatarHolder {
+    width: 35px;
+    height: 35px;
+    border: none;
+  }
+
+  .comment  {
+    border-bottom: 1px solid $border-thin-color;
+
+    .profile-info .username {
+      padding: 0;
+      color: $tertiary-color;
+      text-transform: uppercase;
+      font-family: $font-family-bold;
+      font-weight: normal;
+    }
+
+    .profile-info .time {
+      font-size: $font-size-default;
+      color: $meta-font-color;
+    }
+
+    .profile-comment {
+      font-family: $font-family;
+      color: $tertiary-color;
+    }
+
+    .profile-info .author_label {
+      border-radius: $border-radius;
+      background: $primary-color;
+      top: 0;
+      padding: 0 5px;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      line-height: 16px;
+    }
+  }
+}
+
+.noEditor {
+  background: $color-bisque;
+}
+
+.editorHolder {
+  background: $color-bisque;
+  padding: 20px;
+
+  .left .editorInput {
+    border: none;
+    border-radius: $border-radius;
+    height: 140px;
+    float: none;
+  }
+
+  .right {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+
+    .btn.blue {
+      top: 0;
+      height: 34px;
+      width: 100%;
+      max-width: 100%;
+      line-height: 20px;
+      float: none;
+    }
+  }
+}

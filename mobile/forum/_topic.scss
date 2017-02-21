@@ -1,0 +1,322 @@
+#pageTitle.topic {
+  background-image: none;
+  border-top: 1px solid $border-thin-color;
+  padding: 13px 20px 14px 20px;
+
+  h1 {
+    color: $tertiary-color;
+    font-size: $font-size-large;
+    width: 80%;
+    line-height: 28px;
+  }
+
+  .vraag {
+    background: url('#{$assets}images/mobile/question@2x.png') no-repeat;
+  }
+  .beantwoord {
+    background: url('#{$assets}images/mobile/checkmark@2x.png') no-repeat;
+  }
+
+  .vraag,
+  .beantwoord {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    margin-left: 4px;
+  }
+}
+
+.threadbits {
+  border-top: 1px solid $border-thin-color;
+
+  .thread .threadUserInfo {
+    padding: 20px 20px 6px 20px;
+
+    .avatarHolder {
+      border: none;
+      padding: 0;
+      margin-right: 14px;
+    }
+
+    .userInfo {
+      padding: 0;
+      line-height: 13px;
+    }
+
+    .userInfo .userName {
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-family: $font-family-bold;
+      font-weight: normal;
+
+      .username.link {
+        color: $tertiary-color;
+        font-size: $font-size-default;
+      }
+    }
+
+    .userInfo .reactionTime {
+      color: $meta-font-color;
+      font-size: $font-size-default;
+    }
+  }
+
+  .thread {
+    border-color: $border-thin-color;
+    line-height: 20px;
+
+    &.even {
+      background: $color-white;
+    }
+
+    .threadAnswer {
+      background: $color-bisque;
+      border-left: none;
+      padding: 20px 20px 15px 20px;
+
+      strong {
+        text-transform: uppercase;
+        background: url('#{$assets}images/mobile/checkmark@2x.png') no-repeat;
+        background-size: 15px;
+        padding-left: 20px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+
+      .original {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
+.threadbits .thread .threadContent {
+  padding: 0 20px;
+  color: $tertiary-color;
+  font-size: $font-size-default;
+
+  iframe {
+      max-width: 100%;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  .footer {
+    padding-bottom: 15px;
+
+    .bestAnswer {
+      color: $primary-color;
+      margin-left: 0;
+      padding-left: 28px;
+
+      &:before {
+        background: url('#{$assets}images/mobile/best-answer@2x.png') no-repeat;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .threadQuote {
+    font-style: normal;
+    border-left-color: $tertiary-color;
+    padding: 5px 0 1px 16px;
+
+    b {
+      text-transform: uppercase;
+    }
+  }
+
+  .postmessage {
+    margin-top: 10px;
+  }
+}
+
+
+.sectionTitle.grey {
+  padding: 16px 20px;
+  background: $tertiary-color;
+  border: none;
+
+  h2 {
+    color: $color-white;
+    line-height: 12px;
+  }
+}
+
+.editorHolder {
+  padding: 20px;
+  background: $color-bisque;
+
+  .left .editorInput {
+    border: none;
+    border-radius: $border-radius;
+    height: 140px;
+    padding: 13px 15px;
+  }
+
+  .right {
+    margin-top: 30px;
+    float: none;
+    max-width: 100%;
+
+    .btn.blue {
+      @include base-secondary-button;
+      width: 100%;
+      float: none;
+    }
+  }
+}
+.sectionTitle .comments_btn a.btn {
+  @include base-secondary-button($alternative:true);
+}
+
+.threadbits .thread .threadUserInfo .postInfo {
+  margin-top: 0;
+
+  .perma {
+    height: 16px;
+    border-radius: $border-radius;
+    border: none;
+    background: $color-wheat;
+    line-height: 16px;
+  }
+
+  .threaduserLabel {
+    padding: 0 5px;
+    margin: 0;
+    border-radius: 0;
+    font-size: $font-size-default;
+    text-transform: uppercase;
+    height: 16px;
+    line-height: 15px;
+
+    &.author {
+      background: $primary-color;
+      border-color: $primary-color;
+    }
+    &.answer {
+      background: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+}
+
+
+//poll
+
+#pollContent {
+  position: relative;
+  z-index: 400;
+
+    strong {
+      font-family: $font-family-bold;
+      font-weight: normal;
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+.pollSubmit {
+  @include base-secondary-button;
+}
+
+.pollSubmit.disabled {
+  opacity: 0.7;
+}
+
+.pollResults {
+
+  li .item {
+    margin-top: 5px;
+  }
+
+  .result {
+    border-radius: $border-radius;
+    border: none;
+    padding: 5px;
+  }
+
+  .bg_result {
+    background-color: $secondary-color;
+    height: 25px;
+    line-height: 15px;
+
+    &.zeroVotes {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .pollPercent,
+  .pollVotes {
+    color: $color-white;
+  }
+}
+
+
+.threadbits .thread ul li {
+  padding-left: 0;
+  background-image: none;
+}
+
+
+//modbreak
+.threadbits .thread.modbreak .threadHolder {
+  border: 2px solid $tertiary-color;
+  margin: 4px;
+}
+
+// Attachments
+.mediaContainer {
+  border-top: 0;
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  .mediaHolder {
+    margin: 0 10px 15px 0;
+    width: auto;
+    height: auto;
+    line-height: 70px;
+    position: relative;
+
+    .image,
+    .imageHolder,
+    .imageHolder img,
+    .attachment_gallery_image,
+    .attachment_gallery_video {
+      width: 104px !important;
+      height: 70px !important;
+      max-width: 104px;
+      max-height: 70px;
+      border-radius: 0;
+      background: none;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 140px;
+      max-height: 100px;
+    }
+
+    &:nth-child(3n+1) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.videoWrapper {
+  margin: 10px 0;
+}
+
+.bb-spoiler-container .bb-spoiler-head-hide,
+.bb-spoiler-container .bb-spoiler-head-show {
+  color: $primary-color;
+}

@@ -1,0 +1,576 @@
+.threadTop {
+  margin-bottom: 6px;
+}
+
+.firstPost.display {
+  background-color: $color-white;
+
+  .firstPostHeader {
+    padding: 8px 20px 0;
+    position: relative;
+  }
+
+  .returnLink {
+    display: none;
+  }
+
+  // Title
+  h1.firstPostTitle {
+    padding-bottom: 13px;
+    padding-left: 0;
+    color: $color-river-bed;
+    font-size: $font-size-large;
+    line-height: 30px;
+
+    .Beantwoord,
+    .Vraag {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-left: 7px;
+    }
+
+    .c-closed {
+      color: $color-beetroot;
+    }
+
+    .Beantwoord {
+      @include base-sprite(-51px, -70px);
+    }
+
+    .Vraag {
+      @include base-sprite(-15px, -70px);
+    }
+  }
+
+  .firstPostContent.thread {
+    border: 0;
+  }
+
+  // Link to original post
+  .firstPostContent + .closedMessage {
+    color: $link-font-color;
+    border: 0;
+  }
+
+
+  // Subscribe
+  .subscribeBtn {
+
+    &,
+    &:hover,
+    &.active,
+    &.active:hover {
+      background: none;
+      border: 0;
+      box-shadow: none;
+      color: $link-font-color;
+      font-size: $font-size-default;
+      font-weight: normal;
+      margin: 0 14px 8px 0;
+      padding: 0 0 4px 0;
+      text-decoration: none;
+      line-height: 23px;
+    }
+
+    em {
+      display: none;
+      font-style: normal;
+    }
+
+    i {
+      width: 21px;
+      height: 21px;
+      background-image: none;
+      @include base-sprite(-15px,-282px);
+    }
+
+    &.active i,
+    &.active:hover i {
+      @include base-sprite(-49px,-282px);
+    }
+  }
+}
+
+// Share
+.share_box_holder.default .share_button {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: $link-font-color;
+  font-size: $font-size-default;
+  font-weight: normal;
+  margin: 0 10px 9px 0;
+  padding: 0 0 4px 0;
+  line-height: 22px;
+
+  &:before {
+    @include base-sprite(-13px,-326px);
+    content: " ";
+    margin-right: 7px;
+    height: 21px;
+    width: 21px;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
+.share_box_holder.default .shareBox {
+  top: 35px;
+}
+
+// Tags
+.firstPost.display .tagHolder {
+  width: 65%;
+  margin-top: -3px;
+  margin-left: 0;
+
+  .tagDesc {
+    width: 36px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tags,
+  .editorTags {
+    width: 80%;
+    width: calc(100% - 70px);
+    max-width: none;
+    margin: 1px 0 0;
+
+    span.tag {
+      background-image: none;
+      border: none;
+      cursor: pointer;
+      font-weight: normal;
+      height: 28px;
+      color: $link-font-color;
+      line-height: 1;
+      margin: 0;
+      padding: 6px 6px 6px 0;
+      text-transform: capitalize;
+
+      &.editorBTN {
+        background-color: $color-white;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    input {
+      border-color: $border-thin-color;
+    }
+
+    .comma {
+      margin: 0;
+      color: $tertiary-color;
+      display: inline-block !important;
+    }
+
+    &.lastChild .comma {
+      display: none !important;
+    }
+
+    // Edit tags btn
+    .changeTags {
+      color: $tertiary-color;
+      background-color: $color-wheat;
+      background-image: none;
+      margin: 2px 0 10px 10px;
+      height: 20px;
+      width: 20px;
+      text-indent: 0;
+
+      &:before {
+        @include insided-icon;
+        padding: 4px;
+        content: $insided-icon-01;
+        font-size: 13px;
+        display: inline-block;
+        color: $tertiary-color;
+      }
+
+      &:hover:before {
+        color: $color-white;
+        background-color: $primary-color;
+      }
+    }
+
+    // New tag input
+    .inputTag input {
+      height: 25px;
+      width: 120px;
+    }
+
+    // Add new tag btn
+    span.addTag {
+
+      @include base-secondary-button;
+      text-indent: 0;
+      width: auto;
+      height: 24px;
+      padding: 4px 10px;
+      line-height: 18px;
+      font-size: $font-size-mid;
+
+      &:hover {
+        width: auto;
+        height: 24px;
+        padding: 4px 10px;
+        line-height: 18px;
+        font-size: $font-size-mid;
+      }
+    }
+
+    // Save new tags btn
+    #saveTags {
+      @include base-primary-button;
+      height: 24px;
+      padding: 4px 10px;
+      line-height: 18px;
+      font-size: $font-size-mid;
+
+      &:hover {
+        height: 24px;
+        padding: 4px 10px;
+        line-height: 18px;
+        font-size: $font-size-mid;
+      }
+    }
+  }
+}
+
+.firstPost.display .tags .tag.lastChild .comma {
+  display: none !important;
+}
+
+//hr
+.titleHead .animatedBorder {
+  border-top: 1px solid $border-thin-color;
+  margin: 0 10px;
+}
+
+// Link to own profile
+.titleHead .subscribeBox {
+  top: auto;
+  bottom: 10px;
+
+  .profile {
+    float: right;
+    border: none;
+  }
+}
+
+
+//First post content
+.titleHead.firstPost {
+
+  .left {
+    width: 50px;
+    margin-right: 20px;
+
+    .avatarHolder {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .right {
+    float:left;
+    width: 120px;
+    font-size: $font-size-default;
+    margin-top: -5px;
+  }
+}
+
+.thread .threadUserInfo {
+  font-size: $font-size-default;
+
+  .usernameHolder {
+
+    .username {
+      color: $tertiary-color;
+      font-family: $font-family-bold;
+      font-size: $font-size-default;
+      font-weight: normal;
+    }
+
+    .userMeta,
+    span.userreactions {
+      color: $meta-font-color;
+    }
+  }
+}
+
+.thread .threaduserLabel {
+  font-size: 10px;
+  font-style: normal;
+  background: none;
+  width: 50px;
+  height: 15px;
+  line-height: 15px;
+  margin: 0;
+  background-color: $primary-color;
+  color: $color-white;
+}
+
+
+.thread .threadContent {
+  margin-left: 262px;
+
+  .postmessage {
+    color: $tertiary-color;
+    line-height: 19px;
+  }
+}
+
+//Thread links
+.thread .threadTop .threadLink {
+
+  a:before,
+  span:before {
+    @include insided-icon;
+    font-size: 13px;
+    display: inline-block;
+    color: $tertiary-color;
+  }
+
+  a.threadFlag,
+  a.threadEdit,
+  span.threadPerma a {
+    padding: 5px 4px 5px 4px;
+    text-indent: 0;
+    background-image: none;
+    background-color: $color-wheat;
+    border-radius: 0;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $primary-color;
+    }
+  }
+
+  a:hover:before {
+    color: $color-white;
+  }
+
+  a.threadFlag:before {
+    display: block;
+    content: $insided-icon-03;
+  }
+
+  a.threadEdit:before {
+    display: block;
+    content: $insided-icon-01;
+  }
+
+  span.threadPerma a {
+    cursor: $cursor-value;
+
+    &:before {
+      display: block;
+      content: $insided-icon-14;
+    }
+  }
+}
+
+
+//Best answer
+.threadContent .threadAnswer,
+.threadContent .postAnswer {
+  padding: 16px 20px 20px 18px;
+  border-left: none;
+  background-color: $color-wheat;
+
+  .meta {
+    font-family: $font-family-bold;
+    color: $tertiary-color;
+    position: relative;
+    font-weight: normal;
+
+    &:before {
+      @include base-sprite(-51px,-70px);
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  p {
+    margin-top: 12px;
+  }
+
+  a {
+    font-style: normal;
+    color: $link-font-color;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//poll
+#pollContent .pollHolder {
+  border: none;
+
+  h4 {
+    color: $tertiary-color;
+  }
+
+  .pollList input {
+    margin-right: 5px;
+  }
+
+  .pollSubmit.BTN {
+    @include base-secondary-button($alternative:true);
+  }
+}
+
+.pollResults {
+  margin: 15px 0 0 0;
+
+  .pollStats {
+    margin-bottom: 15px;
+  }
+
+  .result {
+    padding: 0;
+    border: none;
+    height: 10px;
+    margin-bottom: 6px;
+  }
+
+  .bg_result {
+    height: 10px;
+    background-color: $secondary-color;
+
+    &.zeroVotes {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .pollAnswer {
+    color: $tertiary-color;
+  }
+
+  .pollVotes {
+    color: $color-silver;
+  }
+
+  .pollPercent {
+    float: none;
+  }
+}
+
+//Signature
+.thread .threadContent .signature {
+  border-top-color: $border-thin-color;
+  font-style: normal;
+  color: $color-silver;
+  font-size: $font-size-default;
+}
+
+//React
+.thread .threadContent .reactAndMark {
+
+  a.react,
+  a.mark {
+    @include base-sprite(-12px,-370px);
+    padding-left: 30px;
+    color: $link-font-color;
+    font-style: normal;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a.react {
+    @include base-sprite(-12px,-370px);
+  }
+
+  a.mark {
+    @include base-sprite(-12px,-411px);
+    padding-bottom: 1px;
+  }
+}
+
+//Attachments
+.threadContent .mediaContainer {
+
+  h4 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: $color-river-bed;
+  }
+
+  .mediaHolder {
+    margin: 0 20px 20px 0;
+  }
+}
+
+//related
+.related.container {
+  background-color: $tertiary-color;
+  padding: 20px 0;
+  margin-bottom: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: $font-size-default;
+  }
+
+  a {
+    color: $color-white;
+    background: none;
+    padding-left: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    display: block;
+    color: $meta-font-color;
+    margin-left: 0;
+  }
+
+  .Beantwoord,
+  .Vraag {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 7px;
+  }
+
+  .Beantwoord {
+    @include base-sprite(-51px, -70px);
+  }
+
+  .Vraag {
+    @include base-sprite(-15px, -70px);
+  }
+}
+
+
+.threadUserInfo .avatarHolder .ForumUserImageLabel {
+  right: -2px;
+  top: -1px;
+}

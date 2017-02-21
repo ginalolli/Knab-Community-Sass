@@ -1,0 +1,314 @@
+// @MIXINS
+
+// We use this mixin to style placeholder attributes
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+//Usage
+// element {
+//   @include placeholder {
+//     font-style: normal !important;
+//     // needs important to override
+//     color: $placeholder-color !important;
+//     opacity: 1 !important;
+//     font-size: $font-size-default;
+//   }
+// }
+
+// For this mixin to work in FF, please reset opacity: 1; in the selectors.
+// Firefox 19 lowers the opacity of the placeholder to 0.54 by default.
+@mixin placeholder {
+
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+
+// We use this mixin to create the font sizes in REM.
+//
+// $font-size - use a variable that is set in your _variables file
+// $line-height - per default this is set to "true" in which it will add a line-height based on the font-size & $base-line-height
+@mixin base-font-size($font-size, $line-height: true) {
+  font-size: $font-size;
+
+  @if $line-height == true {
+    line-height: ceil($font-size / $font-lineheight) * ($font-lineheight / $font-size);
+  }
+}
+
+// We use this mixin to create a default button base.
+//
+// $style - Sets base styles. Can be set to false. Default: true.
+// $base-button-display - Used to control display property. Default: $base-button-display || inline-block
+@mixin base-button($style:true, $display:$button-display) {
+
+  @if $style {
+    border: none;
+    cursor: $cursor-value;
+    border-radius: $button-radius;
+    text-align: $button-text-align;
+    padding: 0 34px;
+    height: 45px;
+    line-height: 46px;
+    font-size: $font-size-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-out;
+    text-shadow: none;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background-image: none;
+  }
+}
+
+
+@mixin base-button-styling(
+$base-button-shadow-status: $base-button-shadow,
+$base-button-box-shadow-status: $base-button-box-shadow-status,
+$base-button-color: $base-button-color,
+$base-button-background-color: $base-button-background-color,
+$base-button-font-style: $base-button-font-style,
+$base-button-box-shadow-color: transparent)
+{
+  @include base-button;
+  background-color: $base-button-background-color;
+  color: $base-button-color;
+  font-style: $base-button-font-style;
+  text-decoration: none;
+  background-image: none;
+}
+
+// Primary button
+@mixin base-primary-button {
+  @include base-button-styling(false, true, $button-font-color, $primary-button-bg, normal);
+
+  &:hover,
+  &:active {
+    @include base-button-styling(false, true, $button-font-color, $primary-button-bg-hover, normal);
+    background-color: $primary-button-bg-hover;
+  }
+}
+
+@mixin base-primary-button($alternative:false) {
+  @include base-button-styling(false, true, $button-font-color, $primary-button-bg, normal);
+
+  &:hover,
+  &:active {
+    @include base-button-styling(false, true, $button-font-color, $primary-button-bg-hover, normal);
+    background-color: $primary-button-bg-hover;
+  }
+
+  // Alternative (less height and smaller font size)
+  @if $alternative {
+    &,
+    &:active {
+      @include base-button-styling(false, true, $button-font-color, $primary-button-bg, normal);
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+
+    &:hover {
+      @include base-button-styling(false, true, $button-font-color, $primary-button-bg-hover, normal);
+      background-color: $primary-button-bg-hover;
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+  }
+}
+
+// Secondary button
+@mixin base-secondary-button($alternative:false) {
+  @include base-button-styling(false, false, $button-font-color, $secondary-button-bg, normal);
+
+  &:hover,
+  &:active {
+    @include base-button-styling(false, true, $button-font-color, $secondary-button-bg-hover, normal);
+    background-color: $secondary-button-bg-hover;
+  }
+
+  // Alternative (less height and smaller font size)
+  @if $alternative {
+
+    &,
+    &:active {
+      @include base-button-styling(false, true, $button-font-color, $secondary-button-bg, normal);
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+
+    &:hover {
+      @include base-button-styling(false, true, $button-font-color, $secondary-button-bg-hover, normal);
+      background-color: $secondary-button-bg-hover;
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+  }
+}
+
+// Tertiary button
+@mixin base-tertiary-button($alternative:true) {
+  @include base-button-styling(false, false, $button-font-color, $tertiary-button-bg, normal);
+  font-size: $font-size-medium;
+  text-transform: capitalize;
+
+  &:hover,
+  &:active {
+    @include base-button-styling(false, true, $button-font-color, $tertiary-button-bg-hover, normal);
+    background-color: $tertiary-button-bg-hover;
+    box-shadow: none;
+    text-transform: capitalize;
+  }
+
+  // Alternative (less height and smaller font size)
+  @if $alternative {
+    &,
+    &:active {
+      @include base-button-styling(false, true, $button-font-color, $tertiary-button-bg, normal);
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+
+    &:hover {
+      @include base-button-styling(false, true, $button-font-color, $tertiary-button-bg-hover, normal);
+      background-color: $tertiary-button-bg-hover;
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+      padding: 0 20px;
+    }
+  }
+}
+
+// Default input text field
+@mixin base-text-input() {
+  background: #fff;
+  border: 1px solid $border-thin-color;
+  border-radius: $border-radius;
+  box-shadow: none;
+  height: 45px;
+  padding: 0 10px;
+  text-shadow: none;
+  -webkit-appearance: none;
+}
+
+@mixin base-textarea() {
+  border-color: $input-border-color;
+  border-radius: $border-radius;
+  color: $input-font-color;
+  font-size: $font-size-default;
+  line-height: $font-lineheight;
+  font-family: $font-family-form;
+  resize: vertical;
+  -webkit-appearance: none;
+}
+
+// Default container (white container on black background)
+@mixin container() {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+@mixin base-label() {
+  background: $primary-color;
+  border-radius: $border-radius;
+  color: $color-white;
+  display: inline-block;
+  font-weight: normal;
+  font-size: $font-size-small;
+  height: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 3px 6px;
+  width: auto;
+}
+
+@mixin base-sprite($x:0,$y:0,$color:false) {
+  @if $color {
+    background-color: $color;
+  }
+
+  background-image: url("#{$assets}images/knab-bank-sprite.png") !important;
+  background-repeat: no-repeat;
+  background-position: $x $y;
+}
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix() {
+  clear: both;
+
+  &:before,
+  &:after {
+    content: ''; // 1
+    display: table; // 2
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Autoprefixer doesn't support all
+// Usage: @include prefix(transform, rotate(45deg), webkit ms);
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+/// Sets the `width` and `height` of the element.
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}

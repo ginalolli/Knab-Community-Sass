@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'insided-icons';
+  src: url("#{$fonts}insided-icons/insided-icons.eot");
+  src: url("#{$fonts}insided-icons/insided-icons.eot?#iefix") format("embedded-opentype"),
+  url("#{$fonts}insided-icons/insided-icons.woff") format("woff"),
+  url("#{$fonts}insided-icons/insided-icons.ttf") format("truetype"), url("#{$fonts}insided-icons/insided-icons.svg#insided-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'IntroBoldCaps';
+  src: url("#{$fonts}intro-bold-caps/IntroBoldCaps.eot#");
+  src: url("#{$fonts}intro-bold-caps/IntroBoldCaps.eot?#iefix") format("embedded-opentype"), url("#{$fonts}intro-bold-caps/IntroBoldCaps.woff") format("woff"), url("#{$fonts}intro-bold-caps/IntroBoldCaps.ttf") format("truetype"), url("#{$fonts}intro-bold-caps/IntroBoldCaps.svg#IntroBoldCaps") format("svg");
+  font-style: normal; 
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+}

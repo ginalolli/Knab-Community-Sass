@@ -1,0 +1,33 @@
+header {
+  background-color: $color-white;
+  background-image: none;
+
+  &.toRight {
+    box-shadow: none;
+  }
+
+  #logo {
+    background: url('#{$assets}images/mobile/logo@2x.png') no-repeat;
+    background-color: $color-white;
+    background-size: 50px 16px;
+    height: 16px;
+    width: 50px;
+    left: 20px;
+    top: 13px;
+  }
+}
+
+header .headerLink.menuLink,
+header .headerLink.menuLink:focus,
+header .headerLink.menuLink:active {
+  background: url('#{$assets}images/mobile/menu@2x.png') no-repeat;
+  background-color: $color-white;
+  background-size: 24px 16px;
+  border-right: 0;
+  box-shadow: none;
+  width: 24px;
+  height: 16px;
+  right: 20px;
+  top: 13px;
+  left: auto;
+}

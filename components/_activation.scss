@@ -1,0 +1,32 @@
+.container.welcomeActivation {
+  padding: 20px;
+
+  h2, h2 a.active {
+    margin: 0 0 20px 0;
+    font-size: $font-size-large;
+    color: $color-river-bed;
+  }
+
+  .label {
+    width: 20%;
+  }
+
+  .content {
+    width: 80%
+  }
+
+  input[type="text"] {
+    height: 35px;
+  }
+
+
+  .contentBlock {
+    margin-left: 0;
+    padding-top: 10px;
+    border-top: none;
+
+    .manualActivationBTN {
+      @include base-secondary-button($alternative:true);
+    }
+  }
+}

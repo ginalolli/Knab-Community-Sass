@@ -1,0 +1,160 @@
+.forumOverviewListingBoxHeader {
+  border-bottom: none;
+  background-color: $tertiary-color;
+  height: 45px;
+
+  h2,
+  h2 a,
+  .topics,
+  .reactions,
+  .lastReaction {
+    color: $color-white;
+    float: left;
+  }
+
+
+  h2 {
+    width: 308px;
+    padding-left: 20px;
+    line-height: 40px;
+  }
+
+  .topics,
+  .reactions,
+  .lastReaction {
+    margin-top: 13px;
+    width: 90px;
+
+    span {
+      color: $meta-font-color;
+    }
+  }
+}
+
+.forumOverviewListingBoxFooter {
+  background-color: $color-white;
+}
+
+.forumOverviewListingBoxItem {
+  position: relative;
+}
+
+//Overview listing
+ul.forumOverviewBits {
+  background-color: $color-white;
+
+  h3, h3 a {
+    color: $tertiary-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  li {
+    border-bottom: 1px solid $border-thin-color;
+    padding: 15px 0;
+  }
+
+  .boxItemIcon {
+      @include base-sprite(9px,-20px);
+      margin-right: 20px;
+      margin-left: 7px;
+      position: relative;
+      top: -1px;
+      left: -1px;
+  }
+  .boxItemIcon.new {
+    @include base-sprite(-61px,-20px);
+  }
+}
+
+.forumOverviewListingBoxItemDescNew {
+    width: 200px;
+    margin-right: 30px;
+}
+
+.forumOverviewListingBoxItemSummaryNew {
+  width: 180px;
+  margin-right: 0;
+
+  .counter.topics,
+  .counter.reactions {
+    float: left;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .counter.topics {
+    width: 90px;
+  }
+
+  .counter.reactions {
+    width: 90px;
+  }
+}
+
+.forumOverviewListingBoxItemLastReaction {
+  position: relative;
+  top: 8px;
+  width: 193px;
+
+  .time {
+    color: $meta-font-color;
+    font-size: $font-size-small;
+    line-height: 11px;
+  }
+}
+.forumOverviewListingBoxItemLastReactionLink {
+  position: relative;
+  margin-bottom: 5px;
+}
+.forumOverviewListingBoxItemLastReactionLabel {
+  margin-right: 0;
+  margin-left: 5px;
+  text-indent: -9999px;
+  float: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.forumOverviewListingBoxItemLastReactionLabel.Vraag {
+  @include base-sprite(-16px,-70px);
+}
+
+.forumOverviewListingBoxItemLastReactionLabel.Beantwoord {
+  @include base-sprite(-51px,-70px);
+}
+
+
+.forumOverviewListingBoxItemLastReactionSum {
+
+  .usernameHolder {
+    width: auto;
+    float: left;
+    margin-right: 5px;
+
+    .forumOverviewListingBoxItemLastReactionAccount {
+      color: $tertiary-color;
+    }
+  }
+}
+
+.btnCollapse {
+  top: 16px;
+  right: 19px;
+  @include base-sprite(-20px,-118px);
+}
+.collapsed .btnCollapse {
+  @include base-sprite(-20px,-134px);
+}
+
+
+.ForumContentListMarkAll,
+.forumOverviewListingBoxCollapseInfo {
+  color: $link-font-color;
+  background: none;
+}

@@ -1,0 +1,31 @@
+.pagination {
+  background: $color-white;
+  border-top: 1px solid $border-thin-color;;
+  height: auto;
+  padding: 23px 0 10px 0;
+
+  ul .pagenumber {
+    margin-right: 10px;
+
+    a {
+      padding: 0 14px;
+      border: none;
+      color: $color-white;
+      background: $tertiary-color;
+    }
+
+    a.current {
+      background: $secondary-color;
+    }
+  }
+
+  ul .gap {
+    border: none;
+    padding: 0 10px 0 0;
+  }
+
+  .paginationContainer .nextHolder {
+    right: -65px !important;
+    border: none;
+  }
+}

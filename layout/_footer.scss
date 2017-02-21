@@ -1,0 +1,270 @@
+.whatsGoingOn.container {
+  background-color: $tertiary-color;
+  margin-bottom: 0;
+  padding: 25px 0;
+
+  h3 {
+    color: $color-white;
+  }
+
+  .going, .online, .social {
+    text-align: center;
+    margin: 0;
+  }
+
+  .going {
+    width: 340px;
+    position: relative;
+
+  .stats {
+    color: $color-white;
+    text-transform: lowercase;
+    text-align: center;
+    position: relative;
+    left: 114px;
+
+    .stat {
+      text-align: center;
+
+      span {
+        margin-right: 5px;
+        float: none;
+      }
+    }
+  }
+}
+
+  .online {
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .UsersOnline {
+      width: 215px;
+      position: relative;
+      left: 60px;
+    }
+
+    .forumUser {
+      margin: 0 10px 18px 0;
+    }
+  }
+
+  .social {
+
+    width: 320px;
+
+    .share_box_holder.onindex .shareBox .inner a {
+      float: none;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      padding: 0;
+      height: auto;
+
+      &:before {
+        @include fa-icon;
+        color: $color-timberwolf;
+        font-size: 26px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    a.share_facebook,
+    a.share_twitter,
+    a.share_googleplus {
+      background: none;
+      border: none;
+    }
+
+    a.share_facebook {
+
+      &:before {
+        content: $fa-var-facebook-square;
+      }
+
+      &:hover {
+        box-shadow: none;
+        text-shadow: none;
+      }
+    }
+
+    a.share_twitter:before {
+      content: $fa-var-twitter-square;
+    }
+
+    a.share_googleplus:before {
+      content: $fa-var-google-plus-square;
+    }
+  }
+}
+
+
+//Balloon
+.UsersOnline .baloon .popupInfo {
+  border: none;
+  padding-bottom: 2px;
+}
+
+.online .forumUserPopup .popupInfo .forumUserInfo {
+  width: 115px;
+
+  .usernameHolder, .userTitle {
+    width: 66px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+//View mobile and Insided logo
+.contentFooter {
+  background-color: $primary-color;
+
+  .clientDeviceSwitcher {
+      @include base-sprite(0,0);
+      position: relative;
+      top: 5px;
+      padding-top: 9px;
+  }
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .logoInsided {
+    background: none;
+    text-indent: 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:before {
+      @include insided-icon;
+      content:$insided-icon-40;
+      display: inline;
+      color: $color-white;
+      line-height: 1;
+      position: relative;
+      top: 3px;
+      font-size: $font-size-large;
+      vertical-align: middle;
+    }
+
+    &:hover:before {
+      color: $tertiary-color;
+    }
+  }
+}
+
+#footer {
+  padding: 40px 0 80px 0;
+  background: $color-timberwolf url('#{$assets}images/footer-bg.png') no-repeat 1088px 0;
+
+  .wrapper {
+    background-color: transparent;
+  }
+
+  h2 {
+    font-size: $font-size-default;
+    text-transform: none;
+    font-family: $font-family;
+    color: $color-black;
+  }
+
+  a {
+    color: $color-river-bed;
+
+    &:hover {
+      color: $link-font-color-hover;
+      text-decoration: none;
+    }
+  }
+
+  .topFooter {
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .footerNav {
+      width: 240px;
+      float: left;
+      float: left;
+    }
+  }
+
+  .subFooter {
+    @include clearfix;
+  }
+
+  .footerPills {
+    float: left;
+    padding-top: 4px;
+    margin-left: 10px;
+
+    li {
+      display: inline;
+
+      &:after {
+        display: inline-block;
+        content: "-";
+        padding: 0 4px;
+      }
+
+      &.firstChild:after {
+        content: "|";
+      }
+
+      &.lastChild:after {
+        content: "";
+      }
+    }
+  }
+
+
+  .socialShare {
+    float: left;
+
+    a:before {
+      @include fa-icon;
+      display: inline-block;
+      color: $color-river-bed;
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .facebook:before {
+      content: $fa-var-facebook-square;
+    }
+
+    .linkedin:before {
+      content: $fa-var-linkedin-square;
+    }
+
+    .twitter:before {
+      content: $fa-var-twitter-square;
+    }
+
+    .youtube:before {
+      content: $fa-var-youtube-square;
+    }
+
+    .googleplus:before {
+      content: $fa-var-google-plus-square;
+    }
+  }
+}

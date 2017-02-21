@@ -1,0 +1,143 @@
+#pageTitle {
+  border-top: none;
+  background-color: $tertiary-color;
+  background-image: url('#{$assets}images/linear-gradient-bg.png');//fallback
+  background-repeat: repeat-y;
+  background: linear-gradient(to right, $tertiary-color, $color-ship-cove);
+  padding: 17px 20px 20px 20px;
+  box-shadow: none;
+
+  h1 {
+    color: $color-white;
+    font-family: $font-family-bold;
+    font-size: 24px;
+    line-height: 23px;
+  }
+}
+
+.sectionTitle.dark {
+  background-color: $tertiary-color;
+  height: 45px;
+  border: none;
+  box-shadow: none;
+  padding: 10px 20px;
+
+  h2 {
+    font-size: $font-size-large;
+    line-height: 22px;
+  }
+}
+
+.forumOverview .item,
+.mobileOverview .item,
+.forumList .item {
+  border-bottom: none;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.forumOverview .item.sticky .forumInfo {
+  background: $color-black-haze;
+  border-bottom: 1px solid $tertiary-color;
+}
+.forumOverview .item.sticky .row {
+  background: $color-black-haze;
+}
+
+.forumOverview .c-closed {
+  color: $color-beetroot;
+}
+
+.forumList .forumInfo,
+.forumOverview .forumInfo {
+  padding: 17px 20px 15px 20px;
+  margin: 0;
+  border-bottom: 1px solid $border-thin-color;
+  width: 100%;
+  position: relative;
+
+  h3 {
+    color: $tertiary-color;
+    font-size: $font-size-default;
+    font-weight: normal;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .row {
+    line-height: 20px;
+  }
+
+  .unreadPostCounterForums,
+  .js-unreadPostCounterOverview {
+    color: $meta-font-color;
+    font-size: $font-size-default;
+  }
+}
+
+.forumOverview .item,
+.forumList .item {
+  border: none;
+
+  .row:active,
+  .row:hover,
+  .row:focus {
+    background-color: $color-bisque;
+  }
+}
+
+.forumInfo:active,
+.forumInfo:focus,
+.forumInfo:active h3,
+.forumInfo:focus h3 {
+  background-color: $color-bisque;
+}
+
+.mobileOverview .item .row,
+.forumOverview .item .row,
+.forumList .item .row {
+  padding: 0;
+}
+
+.forumInfo p {
+  color: $meta-font-color;
+  font-size: $font-size-default;
+
+}
+
+.forumInfo .beantwoord,
+.forumInfo .vraag {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  background-color: $color-white;
+  position: relative;
+  top: 2px;
+
+  &.beantwoord {
+    background: url('#{$assets}images/mobile/checkmark@2x.png') no-repeat;
+    background-size: 15px;
+  }
+  &.vraag {
+    background: url('#{$assets}images/mobile/question@2x.png') no-repeat;
+    background-size: 15px;
+  }
+}
+
+
+.icon.arrow {
+  background: url('#{$assets}images/mobile/chevron@2x.png') no-repeat;
+  // background-color: $color-white;
+  background-size: 9px 15px;
+  border-right: 0;
+  width: 9px;
+  height: 15px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: auto;
+  margin-top: 0;
+}

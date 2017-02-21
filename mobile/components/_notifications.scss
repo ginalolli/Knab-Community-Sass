@@ -1,0 +1,40 @@
+.networkBlock {
+  padding: 18px 20px;
+}
+
+.notification {
+  &.red,
+  &.blue,
+  &.orange,
+  &.yellow,
+  &.green {
+    background: $tertiary-color;
+    border-radius: $border-radius;
+    border: none !important; 
+    border-width: 0;
+    color: #fff;
+    font-size: $font-size-default;
+    line-height: $font-lineheight;
+    min-height: 40px;
+    margin: 0 0 10px;
+    padding: 9px 23px;
+
+    a {
+      color: inherit;
+      font-weight: normal;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.green {
+    background: $color-persian;
+  }
+
+  &.red {
+    background: $color-beetroot;
+  }
+}

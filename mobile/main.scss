@@ -1,0 +1,12 @@
+// Redefine assets for mobile
+$assets: "../../" !default;
+$fonts: "../../fonts/" !default; 
+
+@import "../../../../node_modules/mobile-refactor/refactored.scss";
+
+@import "../helpers/variables",
+        "../helpers/createfont",
+        "../helpers/functions",
+        "../helpers/mixins";
+
+@import "components/components";

@@ -1,0 +1,45 @@
+@function unicode($str){
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
+}
+
+
+// Make the variables readable
+$insided-icon-01: unicode("e600");
+$insided-icon-02: unicode("e601");
+$insided-icon-03: unicode("e602");
+$insided-icon-04: unicode("e603");
+$insided-icon-05: unicode("e604");
+$insided-icon-06: unicode("e605");
+$insided-icon-07: unicode("e606");
+$insided-icon-08: unicode("e607");
+$insided-icon-09: unicode("e608");
+$insided-icon-10: unicode("e609");
+$insided-icon-11: unicode("e60a");
+$insided-icon-12: unicode("e60b");
+$insided-icon-13: unicode("e60c");
+$insided-icon-14: unicode("e60d");
+$insided-icon-15: unicode("e60e");
+$insided-icon-16: unicode("e60f");
+$insided-icon-17: unicode("e610");
+$insided-icon-18: unicode("e611");
+$insided-icon-19: unicode("e612");
+$insided-icon-20: unicode("e613");
+$insided-icon-21: unicode("e614");
+$insided-icon-22: unicode("e615");
+$insided-icon-23: unicode("e616");
+$insided-icon-24: unicode("e617");
+$insided-icon-25: unicode("e618");
+$insided-icon-26: unicode("e619");
+$insided-icon-27: unicode("e61a");
+$insided-icon-29: unicode("e61b");
+$insided-icon-30: unicode("e61c");
+$insided-icon-31: unicode("e61d");
+$insided-icon-32: unicode("e61e");
+$insided-icon-33: unicode("e61f");
+$insided-icon-34: unicode("e620");
+$insided-icon-35: unicode("e621");
+$insided-icon-36: unicode("e622");
+$insided-icon-37: unicode("e623");
+$insided-icon-38: unicode("e624");
+$insided-icon-39: unicode("e625");
+$insided-icon-40: unicode("e900");

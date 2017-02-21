@@ -1,0 +1,68 @@
+.profile-messages {
+  margin: 10px 0;
+  border-bottom: none;
+}
+
+
+.conversation-cont,
+.inbox-cont {
+  h1 {
+    color: $tertiary-color;
+    padding-bottom: 20px;
+  }
+
+  hr {
+    border-bottom-color: $border-thin-color;
+  }
+}
+
+
+.conversation-messages,
+.inbox-conversations {
+    li {
+      border-bottom-color: $border-thin-color;
+      font-size: $font-size-default;
+      padding: 20px;
+  }
+
+  .message-box__body {
+    font-size: $font-size-default;
+  }
+
+  .message-box__intro {
+    color: $tertiary-color;
+    margin-top: 5px;
+  }
+
+  .message-box__username.link,
+  .message-box__username {
+    color: $tertiary-color;
+  }
+
+  .avatar {
+    max-height: 30px;
+    max-width: 30px;
+  }
+
+  .avatar__img {
+    border: none;
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .message-box__time {
+    top: 1px;
+    right: 0;
+    font-size: $font-size-default;
+    color: $meta-font-color;
+  }
+}
+
+.inbox-cont .conversation {
+  border-bottom-color: $border-thin-color;
+}
+
+
+.profile-messages a.btn {
+  padding: 0 34px;
+}

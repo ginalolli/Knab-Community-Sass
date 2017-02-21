@@ -1,0 +1,38 @@
+// Default styling
+.avatarHolder {
+  border: none;
+  padding: 0;
+}
+
+.UsersOnline .avatarHolder36,
+.forumOverviewBits .avatarHolder36,
+.sidebar .avatarHolder60 {
+  @include size(30px);
+}
+
+.titleHead .subscribeBox .avatar24 {
+  @include size(21px);
+}
+
+.threadUserInfo .avatarHolder60,
+.editorHolder .avatarHolder60,
+.avatarSettings .avatarHolder60,
+.follower .avatarHolder60,
+.activity .avatarHolder,
+.inner .avatarHolder60,
+.editorAvatar .avatarHolder60 {
+  @include size(50px);
+}
+
+.profilePrimary .avatarHolder50 {
+  @include size(70px);
+}
+
+img {
+  &.avatar36,
+  &.avatar60,
+  &.avatar48,
+  &.avatar50 {
+    @include size(100%);
+  }
+}

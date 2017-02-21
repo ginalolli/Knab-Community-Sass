@@ -1,0 +1,154 @@
+.blog-overview {
+
+  h1 {
+    font-size: $font-size-large;
+  }
+
+  .posts {
+    margin: 0;
+
+    article {
+      margin: 0 0 20px 0;
+      width: 700px;
+      border: none;
+      border-radius: $border-radius;
+      box-shadow: none;
+    }
+
+    article header {
+      min-height: 400px;
+    }
+
+    article header .thumbnail {
+      width: 700px;
+      height: 400px;
+
+      img {
+        max-height: 400px;
+        min-width: 700px;
+      }
+    }
+
+    article header .thumbnail a .gradient {
+      width: 700px;
+      height: 400px;
+    }
+
+    article .post_content {
+      position: absolute;
+      width: 240px;
+      top: 10px;
+
+      .unlimited {
+        color: $color-white;
+        padding: 0 3px;
+      }
+    }
+
+    article:nth-child(2n+1) .post_content {
+      background: rgba($tertiary-color,0.9);
+      left: 10px;
+
+      .post_subtitle a:hover {
+        color: $color-persian;
+      }
+
+      .post_medatada .post_author {
+        color: $color-persian;
+      }
+
+      .unlimited {
+        background-color: $secondary-color;
+      }
+    }
+
+    article:nth-child(4n+2) .post_content {
+      background: rgba($secondary-color,0.9);
+      right: 10px;
+
+      .post_medatada .post_author {
+        color: $tertiary-color;
+      }
+
+      .post_subtitle a:hover {
+        color: $tertiary-color;
+      }
+
+      .unlimited {
+        background-color: $tertiary-color;
+      }
+
+      .blogBTN.gray {
+        background-color: $tertiary-color;
+      }
+    }
+
+    article:nth-child(4n+4) .post_content {
+      background: rgba($primary-color,0.9);
+      right: 10px;
+
+      .post_medatada .post_author {
+        color: $tertiary-color;
+      }
+
+      .post_subtitle a:hover {
+        color: $tertiary-color;
+      }
+
+      .unlimited {
+        background-color: $tertiary-color;
+      }
+
+      .blogBTN.gray {
+        background-color: $tertiary-color;
+      }
+    }
+
+    article .post_content .post_subtitle {
+      color: $color-white;
+      line-height: 22px;
+
+      a {
+        font-size: $font-size-large;
+      }
+    }
+
+    article .post_content .post_medatada {
+      color: $color-white;
+
+      .post_author:hover {
+        text-decoration: underline;
+      }
+    }
+
+    article .post_content .post_introduction {
+      color: $color-white;
+      font-size: $font-size-default;
+      font-weight: bold;
+    }
+
+    article .post_content .post_footer .comments {
+      background-image: none;
+      color: $color-white;
+      display: inline-block;
+      float: left;
+      padding: 0;
+      line-height: 33px;
+    }
+
+    .on {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.blogBTN {
+  float: none;
+}
+
+.blogBTN.gray {
+  @include base-secondary-button($alternative:true);
+  text-transform: none !important;
+  float: left;
+  margin-right: 20px;
+}

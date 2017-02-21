@@ -1,0 +1,17 @@
+@import "mobile/main";
+
+
+// Redefine assets for mobile
+$assets: "../../" !default;
+$fonts: "../../fonts/" !default;
+
+
+// Reset CSS and get basic typography
+@import "base/typography";
+
+
+@import "mobile/research/overview",
+        "mobile/research/nav",
+        "mobile/research/misc",
+        "mobile/forum/profile",
+        "mobile/research/article";

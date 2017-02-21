@@ -1,0 +1,86 @@
+//Search on index in sidebar
+.search_form {
+  height: 45px;
+  width: 240px;
+  border: 0;
+  margin-bottom: 20px;
+
+  input {
+    height: 45px;
+    width: 178px;
+    float: left;
+  }
+
+  button {
+    margin-top: 0;
+    border: none;
+    background-color: $secondary-color;
+    height: 45px;
+    width: 60px;
+    @include base-sprite(3px,-155px);
+    cursor: $cursor-value;
+
+    &:hover {
+      background-color: $secondary-button-bg-hover;
+    }
+  }
+}
+
+//Search in breadcrumbs
+#breadcrumbs .search_form {
+  float: right;
+  position: relative;
+  top: -8px;
+
+  button {
+    margin-top: 0;
+    height: 45px;
+  }
+}
+
+
+//Overview pages
+.searchContainer {
+
+  .titleHeader {
+    padding: 15px 20px;
+  }
+
+  .searchbits li .title .label {
+    width: auto;
+  }
+
+  h1 {
+    padding-bottom: 8px;
+    padding-left: 0;
+    color: $color-river-bed;
+    font-size: $font-size-large;
+    line-height: 30px;
+    width: 80%;
+    float: left;
+  }
+
+  .searchSummary {
+    position: relative;
+    top: 67px;
+  }
+}
+
+.bigSearch {
+  border: 1px solid $border-thin-color;
+  height: 35px;
+
+  .bigSearchInput {
+    height: 32px;
+  }
+
+  .searchBTN {
+      @include base-secondary-button($alternative:true);
+      @include base-sprite(3px,-160px);
+      background-color: $secondary-color;
+
+      &:hover {
+        background-color: $secondary-button-bg-hover;
+      }
+  }
+}

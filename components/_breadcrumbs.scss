@@ -1,0 +1,56 @@
+.ForumContentBreadcrumb {
+  float: left;
+}
+
+.contentTop.gradientBanner {
+  @include prefix(transform, rotate(0deg), webkit moz ms o);
+  border: none;
+  width: 100%;
+  min-height: 85px;
+  position: relative;
+  background: $color-white url('#{$assets}images/hero.png') no-repeat 0 0;
+  background-size: cover; 
+
+  /* fallback */
+  background-color: $tertiary-color;
+  background-image: url('#{$assets}images/linear-gradient-bg.png');
+  background-repeat: repeat-y;
+
+  background: linear-gradient(to right,$tertiary-color, $color-ship-cove);
+
+  #breadcrumbs {
+    position: relative;
+    width: 100%;
+    position: relative;
+    top: 29px;
+    border: none;
+    margin-bottom: 0;
+    font-size: $font-size-default;
+
+    a {
+      color: $color-white;
+      background: none;
+      position: relative;
+      padding: 0 8px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 15px;
+        background: url('#{$assets}images/breadcrumb-divider.png') no-repeat 0 0;
+        position: relative;
+        right: -10px;
+        top: 8px;
+      }
+    }
+
+    span {
+      color: $color-white;
+    }
+  }
+}

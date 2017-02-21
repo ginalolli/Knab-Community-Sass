@@ -1,0 +1,42 @@
+// Get vendors
+@import
+  "vendors/fontawesome/font-awesome",
+  "vendors/insidedicons/insided-icons";
+
+// All variables and settings are found in the helpers folder
+@import
+  "helpers/variables",
+  "helpers/functions",
+  "helpers/mixins",
+  "helpers/createfont";
+
+
+// Reset CSS and get basic typography
+@import
+   "base/typography";
+
+// All layout based styling are found in the layout folder
+@import
+  "layout/base",
+  "layout/header",
+  "layout/footer",
+  "layout/nav",
+  "layout/sidebar";
+
+@import
+  "components/avatars",
+  "components/breadcrumbs",
+  "components/search",
+  "components/share",
+  "components/select2",
+  "components/modals",
+  "components/error",
+  "components/notifications",
+  "components/input",
+  "components/activation",
+  "components/terms",
+  "components/pagination",
+  "components/set-username",
+  "components/private-messages",
+  "components/settings",
+  "components/knab-cookie";

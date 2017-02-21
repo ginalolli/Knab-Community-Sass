@@ -1,0 +1,79 @@
+.headerContent {
+  position: relative;
+  z-index: $zindex-small;
+}
+
+//Header Content with Hero image
+.headerContent.isGuest {
+  height: 282px;
+  padding: 28px 0;
+  background: $color-white url('#{$assets}images/hero.jpg') no-repeat top center;
+  background-size: cover;
+
+  h1 {
+    color: $color-white;
+    font-size: 47px;
+  }
+
+  p {
+    width: 40%;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    color: $color-white;
+    font-size: 21px;
+    line-height: 29px;
+    font-weight: bold;
+  }
+
+  .btn_login.CTA {
+    @include base-secondary-button;
+    display: inline-block;
+  }
+
+  .btn_register.CTA {
+    @extend .btn_login.CTA;
+    background-color: rgba(255, 255, 255, .7);
+    color: $color-persian;
+    margin-left: 18px;
+    &:hover {
+      color: $color-persian;
+      background-color: rgba(255, 255, 255, 0.90);
+    }
+  }
+
+  .hero_divider {
+    color: $color-white;
+    font-weight: bold;
+    font-size: $font-lineheight;
+    margin: 0 10px;
+  }
+}
+
+
+//Header Content without Hero image
+.headerContent.isNotGuest {
+  @include prefix(transform, rotate(0deg), webkit moz ms o);
+  height: 130px;
+  padding: 25px 0;
+  background-size: cover;
+
+  /* fallback */
+  background-color: $tertiary-color;
+  background: url('#{$assets}images/linear-gradient-bg.png');
+  background: linear-gradient(to right, $tertiary-color, $color-ship-cove);
+  background-repeat: repeat-y;
+
+  h1 {
+    color: $color-white;
+    font-size: 47px;
+  }
+
+  p {
+    width: 40%;
+    margin-bottom: 20px;
+    color: $color-white;
+    font-size: 21px;
+    line-height: 29px;
+    font-weight: bold;
+  }
+}

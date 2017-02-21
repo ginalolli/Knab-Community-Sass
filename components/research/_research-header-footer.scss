@@ -1,0 +1,52 @@
+#header .headerTop #mainNav {
+  top: 0 !important;
+  right: -17px;
+}
+
+//Logo {
+#header a.logo {
+  margin: 0;
+
+  img {
+    width: 70px;
+  }
+}
+
+//Header
+#header .headerTop {
+  height: 50px;
+  box-shadow: none;
+
+  #mainNav {
+    margin: 0;
+    position: inherit;
+    top: 10%;
+    height: 50px;
+
+    ul {
+      margin: 0;
+
+      li a {
+        padding: 16px 9px;
+        cursor: pointer;
+      }
+
+      .lastChild a {
+        padding: 16px 20px;
+      }
+    }
+  }
+}
+
+//Footer
+#footer {
+  border-top: 0;
+  color: $color-river-bed;
+}
+.contentFooter {
+  height: 45px;
+
+  .clientDeviceSwitcher {
+    top: 11px;
+  }
+}

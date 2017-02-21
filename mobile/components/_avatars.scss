@@ -1,0 +1,14 @@
+// Default styling
+.avatarHolder {
+  border: none;
+  padding: 0;
+}
+
+.avatarHolder .avatar36 {
+  @include size(30px);
+}
+
+
+.threadUserInfo .avatarHolder .avatar36 {
+  @include size(35px);
+}

@@ -1,0 +1,257 @@
+.research_single_view {
+  padding-top: 0;
+  background-color: $color-white;
+
+  .post_title {
+    font-size: $font-size-large;
+    color: $tertiary-color;
+    margin-bottom: 8px;
+  }
+
+  .post_metadata {
+    color: $color-silver;
+  }
+
+  .post_content {
+
+    h2 {
+      margin-bottom: 4px;
+      font-size: $font-size-medium;
+      color: $tertiary-color;
+    }
+
+    .btn {
+      width: auto;
+      text-transform: capitalize !important;
+    }
+  }
+
+  .optionReqMsq {
+    font-style: normal;
+    color: $color-silver;
+  }
+}
+
+//Research thumbs
+.research-thumbs .thumb {
+  text-transform: capitalize !important;
+  font-weight: normal !important;
+  color: $color-white !important; //needed to override default css
+  @include base-tertiary-button;
+
+  &.selected,
+  span.pick {
+    @include base-secondary-button(true);
+  }
+
+  span.button {
+    padding: 0;
+  }
+}
+
+ .threadQuote  {
+  font-style: normal;
+  font-family: $font-family;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  b {
+    text-transform: uppercase;
+    color: $tertiary-color;
+  }
+
+  p {
+    font-size: $font-size-medium;
+  }
+}
+
+
+//Research drag and drop
+.research-dragdrop {
+
+  .answers .dragdropMsg {
+    border: 1px solid $color-cloudy-weather;
+    color: $color-silver;
+    background-color: $color-white;
+  }
+
+  .divider {
+    margin: 20px 0;
+    border: 1px solid $color-athens;
+  }
+
+  .sortable li.item {
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background-color: $color-bisque;
+    background-image: none;
+    color: $tertiary-color;
+    text-transform: capitalize;
+
+    &:after {
+      color: $secondary-color;
+    }
+  }
+}
+
+
+//Results
+.research-thumbs.research-results .results,
+.research-radiobutton.research-results .results,
+.research-checkbox.research-results {
+
+  .results-holder {
+    margin-bottom: 10px;
+  }
+
+  .thumbsText,
+  label {
+    font-weight: normal;
+    margin-bottom: 4px;
+  }
+
+  label, .pick {
+    display: inline-block
+  }
+
+  .bar {
+    background-color: $color-bisque;
+    border-radius: 0;
+
+    .score {
+      background-color: $secondary-color;
+    }
+  }
+
+  .votes {
+    color: $color-silver;
+  }
+}
+
+.research-item.research-checkbox {
+  label {
+    cursor: pointer;
+    line-height: 20px;
+    text-align: left;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 20px;
+    input {
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.results .item {
+  height: auto;
+  border-radius: 0;
+  line-height: 24px;
+  padding: 6px 10px;
+
+  &.selected {
+    background: $secondary-color;
+  }
+}
+
+
+//Comments
+.comments.clearfix {
+  background-color: $color-white;
+
+  .comments_control {
+    border: 0;
+    padding: 10px 20px;
+    color: $color-white;
+    background-color: $tertiary-color;
+
+    .comments_count {
+      font-weight: bold;
+      font-family: $font-family-bold;
+      text-transform: uppercase;
+    }
+
+    a.btn {
+      line-height: 20px;
+    }
+  }
+
+  .comment {
+    border-color: $color-athens;
+
+    .profile-info {
+
+      .avatarHolder {
+        &, img {
+          width: 40px;
+          height: 40px;
+          border: 0;
+          padding: 0;
+        }
+      }
+
+      .username {
+        padding: 0;
+        font-size: $font-size-medium;
+        text-transform: uppercase;
+      }
+
+      .time {
+        font-size: $font-size-medium;
+        color: $color-silver;
+      }
+
+      .author_label {
+        background: $secondary-color;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+
+.editorHolder {
+  padding: 20px;
+  background-color: $color-bisque;
+
+  .left {
+    width: 100%;
+
+    .editorInput {
+      padding: 10px 20px;
+      border: 0;
+      height: 120px;
+      border-radius: 0;
+    }
+  }
+
+  .right {
+    width: 100%;
+    max-width: 100%;
+
+    .btn.green {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 100%;
+      @include base-secondary-button(false);
+    }
+  }
+}
+
+.fancybox-image {
+  margin-top: 5px;
+}
+
+.mediaContainer .mediaHolder {
+  margin-right: 0;
+  margin-top: 5px;
+  margin-left: 0;
+  width: 100px;
+}
+
+
+.videoWrapper {
+  margin: 20px 0;
+}

@@ -1,0 +1,165 @@
+//Metadata phrase needs capitilisation
+.on {
+  text-transform: capitalize;
+}
+
+.headerContent {
+  @include prefix(transform, rotate(0deg), webkit moz ms o);
+  height: 65px;
+  padding: 10px 20px;
+  background-color: $tertiary-color;
+  background: url('#{$assets}images/linear-gradient-bg.png');
+  background: linear-gradient(to right, $tertiary-color, $color-ship-cove);
+  background-repeat: repeat-y;
+
+  h1 {
+    color: $color-white;
+    font-size: 24px;
+    line-height: 41px;
+  }
+}
+
+.mobileOverview {
+  margin: 10px;
+
+  .blogInfo {
+    line-height: normal;
+    float: none;
+  }
+
+  .pots_medatada a {
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .item {
+    border-bottom: none;
+    margin-bottom: 10px;
+
+    .post_author {
+      display: inline-block;
+    }
+
+    .row {
+      padding: 0;
+    }
+  }
+
+  .item:first-child {
+    border-top: 0;
+  }
+
+  .item:nth-child(2n+1) {
+
+    .blogInfo {
+      @include prefix(transform, rotate(0deg), webkit moz ms o);
+      background: $tertiary-color;
+    }
+
+    .post_author,
+    &:focus,
+    &:active {
+      color: $color-persian;
+    }
+  }
+
+  .item:nth-child(4n+2) {
+
+    .blogInfo {
+      @include prefix(transform, rotate(0deg), webkit moz ms o);
+      background: $secondary-color;
+    }
+
+    .post_author,
+    &:focus,
+    &:active {
+      color: $tertiary-color;
+    }
+
+    .blogBTN {
+      background-color: $tertiary-color;
+    }
+  }
+
+  .item:nth-child(4n+4) {
+
+    .blogInfo {
+      @include prefix(transform, rotate(0deg), webkit moz ms o);
+      background: $primary-color;
+    }
+
+    .post_author,
+    &:focus,
+    &:active {
+      color: $tertiary-color;
+    }
+
+    .blogBTN {
+      background-color: $tertiary-color;
+    }
+  }
+}
+
+.blogInfo {
+  margin: 0;
+  width: 100%;
+
+  h3 {
+    color: $color-white;
+    font-size: $font-size-large;
+    font-weight: normal;
+    padding: 0 0 20px 20px;
+    margin-bottom: 0;
+  }
+
+  .img-holder {
+    width: 100%;
+    float: none;
+    height: auto;
+    margin: 0;
+    padding-bottom: 10px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .post_medatada,
+  p {
+    color: $color-white;
+    font-size: $font-size-default;
+    padding: 0 20px;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  .post_footer {
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+
+    .blogBTN {
+      @include base-secondary-button($alternative:true);
+      display: inline-block;
+      text-transform: none;
+      margin-right: 20px;
+    }
+
+    .comments,
+    &:focus,
+    &:active {
+      color: $color-white;
+    }
+  }
+}

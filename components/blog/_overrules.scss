@@ -1,0 +1,140 @@
+//Small Overrules
+.link {
+  color: $link-font-color;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header.border {
+  border-bottom: 1px solid #dfdad5;
+  box-shadow: 0 1px 5px 0 rgba(237,235,231,1);
+}
+
+.headerTop #secondaryNav .active:before  {
+  left: 32%;
+}
+
+#header.border .headerTop #secondaryNav .active:before {
+  border: none;
+  background: url('#{$assets}images/blog/active.png') no-repeat 0 0;
+  width: 16px;
+  height: 10px;
+  top: 33px;
+  left: 36%;
+}
+
+#header a.logo {
+  float: none;
+}
+
+#header a.logo img {
+  width: 70px;
+}
+
+#header #mainNav {
+  float: none;
+  margin: -27px 0 0 0;
+}
+
+#header #mainNav ul li a {
+  margin-right: 0;
+  padding: 15px 11px;
+}
+
+#header #mainNav ul .lastChild a {
+  padding: 16px 20px;
+}
+
+#header .headerTop {
+  height: auto;
+  box-shadow: none;
+}
+
+#footer .footerPills li {
+  color: $tertiary-color;
+
+  &:first-child:after {
+      content: "|";
+      color: $tertiary-color;
+  }
+  &:last-child:after {
+      content: "";
+  }
+}
+
+#main-content {
+  margin-top: 20px;
+}
+
+.logoInsided {
+  display: block;
+  float: right;
+}
+
+footer {
+  margin-top: 0;
+}
+
+#footer {
+  border-top: none;
+}
+
+.blog-post .leftColumn {
+  width: $left-width;
+  margin-right: 20px;
+}
+
+.blog-post .rightColumn {
+  width: $right-width;
+  margin: 0;
+}
+
+.pagination {
+  background-color: transparent;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 14px;
+}
+
+.contentFooter {
+  padding: 4px 0 15px 0;
+  position: relative;
+}
+
+.contentFooter .logoInsided {
+  position: relative;
+  top: 3px;
+}
+
+.sidebar .widget.profileWidget {
+  padding-bottom: 8px;
+}
+
+#blog-home li.noResults.clearfix .notification.yellow {
+  width: auto;
+}
+
+.notification {
+  &.red,
+  &.blue,
+  &.orange,
+  &.yellow,
+  &.green {
+    border: none !important;
+ }
+}
+
+h2, h2 a {
+  font-weight: normal;
+  font-size: $font-size-large;
+}
+
+.CTA {
+  @include base-secondary-button($alternative:true);
+}
+
+.pagination .pagenumber.lastChild {
+  border-right: none;
+}

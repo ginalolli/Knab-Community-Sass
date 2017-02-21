@@ -1,0 +1,57 @@
+#mainMenu .searchBox,
+.searchBox.onSearchPage {
+  height: 85px;
+  padding: 20px 20px 0 20px;
+  background: $color-bisque;
+  border: none;
+
+  .searchHolder {
+    border: none;
+    border-radius: $border-radius;
+    background: none;
+    padding-left: 0;
+    height: 45px;
+
+    input[type="search"] {
+      float: left;
+      width: calc(100% - 60px);
+      height: 45px;
+      @include placeholder {
+        font-style: normal !important; // needs important to override
+        color: $placeholder-color !important;
+        opacity: 1 !important;
+        font-size: $font-size-default;
+      }
+    }
+  }
+
+  .searchBTN {
+    background: url('#{$assets}images/mobile/search@2x.png') no-repeat;
+    background-color: $secondary-color;
+    background-size: 16px 16px;
+    background-position: 22px 14px;
+    border: 0;
+    width: 60px;
+    height: 45px;
+    right: 0;
+  }
+}
+
+//on search page
+.searchBox.onSearchPage .searchForm {
+  margin: 0;
+
+  .searchHolder .searchBTN {
+    background: url('#{$assets}images/mobile/search@2x.png') no-repeat;
+    background-color: $secondary-color;
+    background-size: 16px 16px;
+    background-position: 22px 14px;
+    border: 0;
+    width: 60px;
+    height: 45px;
+    right: 0;
+    top: 1px;
+    border-radius: $border-radius;
+    max-width: none;
+  }
+}

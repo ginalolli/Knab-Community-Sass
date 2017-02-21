@@ -1,0 +1,122 @@
+.settingBlock.avatarSettings,
+.settingBlock.mySettings {
+
+  .label {
+    width: 26%;
+  }
+  .content {
+    width: 72%;
+  }
+}
+
+
+.avatarSettings {
+  .deleteAvatar {
+    clear: both;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .imageUploader .avatarHolder {
+    margin-right: 4px;
+  }
+
+  .fileUploadContainer {
+    line-height: 36px;
+  }
+
+  .loader {
+    margin-top: 10px;
+  }
+
+  .maxSize {
+    display: inline-block;
+  }
+
+
+  .fileUploadContainer .fileInputholder {
+    height: 50px;
+    overflow: visible;
+
+    .fakeBTN {
+        @include base-secondary-button;
+        background-image: none !important;
+        padding: 0 20px;
+        height: 35px;
+        line-height: 38px;
+        font-size: $font-size-default;
+
+      &:hover {
+        background-image: none !important;
+        padding: 0 20px;
+        background: $secondary-button-bg-hover !important;
+      }
+    }
+
+    .fakeInput {
+      @include base-text-input;
+      border: 1px solid $border-thin-color;
+      height: 35px;
+    }
+
+    #image {
+      height: 40px;
+      width: 250px;
+      font-size: 1px;
+    }
+  }
+}
+
+.settingBlock  {
+  padding: 20px;
+  border-bottom-color: $border-thin-color;
+
+  .CTA {
+    @include base-secondary-button($alternative:true);
+    float: right;
+  }
+}
+
+.settingBlock.lastChild {
+  padding: 20px 0 0 0;
+}
+
+.settingBlock.mySettings {
+  padding: 20px;
+  border-bottom-color: $border-thin-color;
+
+  .label {
+    width: 41%;
+    margin-right: 10px;
+  }
+}
+
+.settingBlock.mySettings .content {
+  width: 57%;
+
+  label {
+    margin-right: 10px;
+    display: inline-block;
+    width: 113px;
+  }
+}
+
+.custom-radio label, .custom-checkbox label {
+  width: 91%;
+}
+
+.settingBlock .content input[type="text"],
+.settingBlock .content input[type="password"] {
+  border: 1px solid $border-thin-color;
+  width: 100%;
+}
+
+.forumSettingPopup .popupArrow {
+  left: 100px;
+}
+
+.forumSettingPopup .popupInfo ul li a.active {
+  color: $link-font-color;
+}

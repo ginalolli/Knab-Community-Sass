@@ -1,0 +1,136 @@
+//
+// Mobile refactor styling
+// This part is only used to style the new elements used for the refactor
+// All other styling can be done the usual/regular way
+//
+// --------------------------------------------------
+html,
+body{
+  height: 100%;
+}
+
+#frame{
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+}
+
+.refactor {
+  position: inherit;
+  top: inherit;
+  bottom: inherit;
+  left: inherit;
+  right: inherit;
+
+  // Was added for a specific version of IOS where scrolling wasn't smooth
+  // Commented it because it's bashing the dragdrop module in research mobile
+
+//  overflow-y: scroll;
+//  overflow-x: hidden;
+//  -webkit-overflow-scrolling: touch;
+
+}
+#container{
+  transition: margin .4s, right .4s;
+  position: relative;
+  background: white;
+  min-height: 100%;
+}
+.container{
+  z-index: inherit;
+}
+
+.pageLoader{
+  position:fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .4s;
+  background: rgba(255,255,255,1);
+  padding-top: 80px;
+  opacity: 1;
+  z-index: 10;
+
+  &.hidden{
+    opacity: 0;
+  }
+  &:before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:16px;
+    height: 16px;
+    background: url("../../images/mobile/ajax-loader.gif");
+    background-size: 16px 16px;
+    content: '';
+  }
+}
+#pageContent {
+  background: white;
+  height: 100%;
+}
+
+// Menu styling
+// Adding a left or top in the body will change the way the menu opens.
+
+// When using the regular sidebar (left to right).
+// --------------------------------------------------
+body.leftSidebar.menu_open #container,
+body.leftSidebar.menu_open .pageLoader {
+  margin:0 -262px 0 262px;
+}
+
+body.topSidebar.menu_open #mainMenu {
+  left: auto;
+  top: 44px;
+  width: 100%;
+  z-index: 500;
+}
+.menu_open{
+
+  .frame{
+    overflow: hidden;
+  }
+  #mainMenu {
+    overflow: scroll;
+    opacity: 1;
+  }
+  .protect{
+    position:absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255, 0.7);
+    z-index: 10;
+  }
+}
+
+
+#mainMenu {
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .0s;
+}
+
+.navigation,
+.pullToLoad{
+  h3{
+    background: #f8f8f8;
+    text-align: center;
+    padding: 15px;
+  }
+
+  img{
+    display: none;
+    &:before{
+      background: url("../../images/mobile/ajax-loader.gif");
+      background-size: 16px 16px;
+      content: '';
+    }
+  }
+}

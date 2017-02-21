@@ -1,0 +1,129 @@
+html,
+body {
+  @include base-font-size($font-size-default);
+  color: $tertiary-color;
+  font-family: $font-family;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  line-height: $font-lineheight;
+  font-size: $font-size-default;
+  color: $tertiary-color;
+}
+
+a {
+  color: $link-font-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a:hover,
+a.username:hover,
+.notFoundContainer a,
+.avatarSettings .deleteAvatar,
+.messageContent .username,
+.restorePasswordBox.invalid a,
+.mediaHolder .mediaConnect .addToText {
+  color: $link-font-color;
+}
+
+.notFoundContainer a:hover,
+.avatarSettings .deleteAvatar:hover,
+.messageContent .username:hover,
+.restorePasswordBox.invalid a:hover {
+  text-decoration: underline;
+}
+
+
+.threadElements a,
+.legend .threadElements a {
+  color: $primary-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $link-font-color;
+  }
+}
+
+// Headers
+%headers {
+  font-family: $font-family-bold;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  &:hover,
+  &:hover a {
+    text-decoration: none;
+  }
+}
+
+%h1,
+%h2,
+%h3 {
+  @extend %headers;
+}
+
+// these changes have to work website-wide, therefore, there can't be a stronger selector
+// that prevents it from happening. hence the "!importants"
+%h1 {
+  font-size: $font-size-h1;
+}
+%h2 {
+  font-size: $font-size-h2;
+}
+%h3 {
+  font-size: $font-size-h3;
+}
+
+h1 {@extend %h1;}
+h2 {@extend %h2;}
+h3 {@extend %h3;}
+h4 {@extend %h3;}
+h5 {@extend %h3;}
+h6 {@extend %h3;}
+
+
+.titleHeader h1 {
+  font-size: $font-size-large;
+  color: $color-river-bed;
+}
+
+.settingBlock h3 {
+  color: $primary-color;
+}
+
+.termsBox p {
+  margin-bottom: 20px
+}
+
+.termsBox ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+
+  li {
+    list-style: disc;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+}
+
+.reportPopup h2,
+.legendHolder h2 {
+  font-family: $font-family;
+  font-weight: normal;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,59 @@
+input[type="search"],
+input[type="password"],
+input[type="text"] {
+  @include base-text-input;
+  @include placeholder {
+    font-style: normal !important; // needs important to override
+    color: $placeholder-color !important;
+    opacity: 1 !important;
+    font-size: $font-size-default;
+  }
+}
+
+textarea {
+  @include base-textarea;
+  @include placeholder {
+    font-style: normal !important; // needs important to override
+    color: $placeholder-color !important;
+    opacity: 1 !important;
+    font-size: $font-size-default;
+  }
+}
+
+input.placeholder,
+textarea.placeholder {
+  font-style: normal !important;
+  color: $tertiary-color !important;
+}
+
+
+.loginRegister,
+.welcomeActivation,
+.mailActivation,
+.settingBlock .content {
+  input[type="password"],
+  input[type="text"] {
+    @include base-text-input;
+  }
+}
+
+.sidebar input[type="search"] {
+  border: none;
+}
+
+select {
+  color: $meta-font-color;
+}
+
+// Default cursor on common elements
+input[type=checkbox],
+input[type=search],
+input[type=radio],
+input[type=email] {
+  cursor: pointer;
+}
+
+input[disabled=disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

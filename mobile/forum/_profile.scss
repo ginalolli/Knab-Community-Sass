@@ -1,0 +1,95 @@
+.profile-cont {
+
+  h1, h2 {
+    color: $tertiary-color;
+    border-bottom-color: $border-thin-color;
+  }
+  hr {
+    border-bottom-color: $color-white;
+  }
+
+  hr.blank-spacer {
+    background: $color-bisque;
+    border-top-color: $border-thin-color;
+    border-bottom-color: $border-thin-color;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .avatar__img {
+    border: none;
+    padding: 0;
+  }
+
+  .profile-counters {
+    background: $color-bisque;
+    border-top-color: $border-thick-color;
+    border-bottom-color: $border-thick-color;
+
+    .counter {
+      border-left-color: $border-thick-color;
+    }
+
+    a {
+      color: $meta-font-color;
+    }
+  }
+}
+
+.profile-main-desc {
+  padding: 10px 20px 20px 20px;
+
+  .user-desc h3 {
+    color: $tertiary-color;
+    font-size: $font-size-large;
+    line-height: 16px;
+  }
+}
+
+.profile-messages,
+.profile-signature {
+  font-size: $font-size-default;
+}
+
+.profile-signature {
+  border-bottom-color: $border-thin-color;
+}
+
+.profile-details {
+  padding: 20px 20px 15px 20px;
+  font-size: $font-size-default;
+    border-bottom-color: $border-thin-color;
+}
+
+.detail .detailInfo {
+  padding: 0 0 12px 0;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  .userprofilefield {
+    width: 48%;
+  }
+}
+
+
+.profile-cntrls {
+  padding: 20px;
+
+   a {
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: $font-size-default;
+  }
+}
+
+
+//Badges
+.badgeContainer {
+  float: left;
+  margin-right: 5px;
+}

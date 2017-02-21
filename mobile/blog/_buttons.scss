@@ -1,0 +1,11 @@
+.link {
+  color: $link-font-color;
+}
+
+.btn.blue {
+  @include base-secondary-button($alternative:true);
+
+  &, &:hover {
+    line-height: 19px;
+  }
+}

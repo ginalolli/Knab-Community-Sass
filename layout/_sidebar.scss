@@ -1,0 +1,331 @@
+.sidebar {
+
+  .widget {
+    padding: 21px 20px;
+    font-size: $font-size-default;
+    background-color: $color-white;
+
+    .widgetContent {
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px 0;
+      color: $primary-color;
+      font-size: $font-size-default;
+    }
+  }
+}
+
+
+//Profile logged in
+.profileWidget {
+
+  .generalInfo {
+    padding: 0 0 19px 0;
+    border-bottom: 1px solid $border-thin-color;
+    position: relative;
+
+    .right {
+      position: relative;
+      top: -6px;
+
+      .userTitle {
+        color: $color-tarbaby;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+    }
+
+    .avatarHolder60 {
+      margin-right: 15px;
+    }
+  }
+
+  .summary {
+    border-bottom: 1px solid $border-thin-color;
+
+    .sum {
+      border-right: 1px solid $border-thin-color;
+    }
+  }
+
+  .usernameHolder a {
+    @extend %h3;
+    color: $tertiary-color !important;
+  }
+}
+
+.avatarHolder .ForumUserImageLabel {
+  right: -3px;
+  top: -1px;
+}
+
+
+ul.profileMenu {
+  padding: 0;
+
+  li {
+    padding: 18px 0 14px 0;
+    border-top: 1px solid $border-thin-color;
+
+    &.firstChild {
+      border-top: none;
+    }
+
+    &.lastChild {
+      padding-bottom: 2px;
+    }
+
+    a {
+      color: $tertiary-color;
+      @include base-sprite(-22px,-219px);
+
+      span {
+        float: none;
+      }
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+      }
+
+      &:hover span {
+        color: $primary-color;
+      }
+    }
+
+    a.logOut {
+      font-style: normal;
+      color: $tertiary-color;
+      background: none;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .hasSub {
+      @include base-sprite(-21px,-236px);
+      color: $tertiary-color;
+    }
+    .hasSub:hover {
+      @include base-sprite(-21px,-236px);
+      color: $primary-color;
+    }
+
+    .hasSub.collapsed,
+    .hasSub.collapsed:hover {
+      color: $primary-color;
+      background-position: -20px -220px;
+    }
+
+    .profileSubMenu {
+
+      li {
+        border-top: none;
+        padding: 5px 0;
+      }
+
+      a {
+        color: $meta-font-color;
+        background: none;
+        padding-left: 0;
+
+        &:hover {
+          color: $meta-font-color;
+          text-decoration: underline;
+        }
+      }
+
+      a:hover span {
+        text-decoration: underline;
+        color: $meta-font-color;
+      }
+
+      span:hover {
+        color: $meta-font-color;
+      }
+
+      .labelCounter {
+        color: $meta-font-color;
+
+        &:before {
+          content: "(";
+        }
+
+        &:after {
+          content: ")";
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.labelCounter {
+  padding: 0 0 0 5px;
+  font-weight: inherit;
+  font-size: $font-size-default;
+  background: none;
+  color: $tertiary-color;
+
+  &:hover {
+    background: none;
+    text-decoration: none;
+  }
+}
+
+
+
+//Popular tags
+
+.sidebar .tagWidget {
+  padding-top: 14px;
+  padding-bottom: 13px;
+
+  .tag {
+    margin: 0 10px 10px 0;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    .BTN {
+      color: $tertiary-color;
+      font-size: $font-size-default;
+      height: 30px;
+      border: 2px solid $border-thick-color;
+      line-height: 28px;
+      background: $color-white;
+
+      &:hover {
+        text-decoration: none;
+        color: $link-font-color;
+      }
+    }
+  }
+}
+
+//Recent topics
+
+.sidebar .topicWidget {
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.topicWidget {
+
+  a.more {
+    display: block;
+    padding-top: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul li {
+    padding: 14px 0 13px 0;
+    border-bottom: 1px solid $border-thin-color;
+
+    &.firstChild {
+      border-top: 1px solid $border-thin-color;
+    }
+
+    a {
+      color: $tertiary-color;
+      margin-bottom: 0;
+
+      &:hover {
+        color: $link-font-color;
+        text-decoration: none;
+      }
+    }
+
+    .question, .answer {
+      text-indent: -9999px;
+      float: none;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+    }
+
+    .question {
+      @include base-sprite(-15px,-70px);
+    }
+
+    .answer {
+      @include base-sprite(-51px,-70px);
+    }
+  }
+}
+
+
+//Badges
+.widget.badgeWidget {
+
+  a {
+    background: none;
+  }
+
+  .widgetFooter {
+    margin-left: 0;
+  }
+
+  ul .moreBadges {
+    margin-bottom: 7px;
+  }
+
+  ul li .badgeInfo .userName:hover {
+    color: $link-font-color;
+  }
+}
+
+//Blog posts
+
+.newsWidget {
+
+  ul {
+    li {
+      padding: 14px 0;
+      border-bottom: 1px solid $border-thin-color;
+
+      &.firstChild {
+        border-top: 1px solid $border-thin-color;
+      }
+
+      a.title {
+        color: $tertiary-color;
+
+        &:hover {
+          color: $link-font-color;
+        }
+      }
+    }
+  }
+  a.more {
+    display: block;
+    padding-top: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.widget .widgetFooter {
+  border-bottom: none;
+}
+
+.sidebar .widget.logInWidget .btnHolder a.BTN.btn_register {
+  &, &:hover {
+    background-color: $color-white;
+    color: $color-persian;
+    text-decoration: underline;
+    padding: 0 10px;
+  }
+}

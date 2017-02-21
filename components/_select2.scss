@@ -1,0 +1,105 @@
+.select2-container .select2-choice {
+  border-radius: $border-radius;
+  background-image: none;
+  border-color: $input-border-color;
+
+  div,
+  b {
+    border-radius: 0;
+    background: $primary-color;
+    background-image: none!important;
+    border-left: 0;
+  }
+
+  b {
+    padding-left: 0;
+    position: relative;
+  }
+
+  div b:before,
+  .select2-search-choice-close:before {
+    @include insided-icon;
+    content: $insided-icon-32;
+    @include prefix(transform, rotate(90deg) scale(0.7,1), webkit moz ms o);
+    color: #fff;
+    font-size: 7px;
+    position: relative;
+    left: 6px;
+    top: -1px;
+  }
+}
+
+.settingBlock .item .select2-container.lastChild {
+  margin: 10px 0 6px 0;
+}
+
+.default-date-display {
+  width: 256px;
+}
+
+.default-date-day {
+  width: 74px;
+}
+
+.default-date-month {
+  width: 90px;
+}
+
+.default-date-year {
+  width: 80px;
+}
+
+.select2-results .select2-highlighted {
+  background: $primary-color;
+}
+
+.select2-container-active .select2-choice {
+  border-color: $primary-color;
+}
+
+
+// Custom select2 dropdown (sorting on topic page)
+.customSortingHolder{
+  float: right;
+}
+.select2-drop {
+  border-color: $primary-color;
+}
+.select2-container.customSorting{
+  background: transparent;
+  color: $font-size-default;
+
+  .select2-choice {
+    background: transparent;
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+    color: #54585a;
+    margin: 2px 0 0;
+    padding: 0 0 0 9px;
+    height: 28px;
+    line-height: 27px;
+
+    div {
+      background: none;
+    }
+
+    span {
+      font-size: $font-size-default;
+      margin-right: 24px;
+    }
+  }
+
+  .select2-choice div b:before,
+  .select2-search-choice-close:before {
+    content: $insided-icon-32;
+    color: $primary-color;
+    font-size: 9px;
+    @include prefix(transform, rotate(0deg) scale(0.7,1), webkit moz ms o);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.select2-dropdown-open .select2-choice div b:before,
+  &.select2-dropdown-open .select2-search-choice-close:before {
+    @include prefix(transform, rotate(90deg) scale(0.7,1), webkit moz ms o);
+  }
+}

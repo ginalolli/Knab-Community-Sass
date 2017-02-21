@@ -1,0 +1,33 @@
+.container.toRight {
+  box-shadow: none;
+}
+
+#mainMenu {
+  padding-top: 20px;
+
+  .loginBox {
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  .login {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}
+
+#mainMenu .mainMenu li > span .icon {
+  background: none;
+  display: none;
+}
+
+//Search fixes
+#mainMenu .searchBox {
+  height: 65px;
+  padding-top: 0;
+}
+
+.searchBox .searchHolder input[type="search"] {
+  border: 0;
+  border-radius: 0;
+}

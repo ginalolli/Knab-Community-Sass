@@ -1,0 +1,454 @@
+// Editor
+.editor_container {
+  padding: 20px;
+
+  h2 {
+    font-size: 16px;
+  }
+
+  // Set editor width
+  &.edit_post,
+  &.edit_post .editorHolder {
+    padding: 0;
+  }
+
+  &.create_post .editorHolder,
+  &.edit_post .editorHolder,
+  &.create_message .editorHolder {
+    padding-right: 0;
+    padding-left: 63px;
+  }
+
+  // Creat post
+  &.create_post {
+    padding-top: 9px;
+    background-color: $color-white;
+
+
+    h2 {
+      margin-bottom: 6px;
+      color: $color-river-bed;
+      font-size: $font-size-default;
+      font-weight: normal;
+    }
+  }
+
+  // Avatar Arrow
+  .arrow {
+    display: none;
+  }
+
+  // Title
+  .editorTitle {
+    border: 0;
+    height: auto;
+    margin: 0 0 20px;
+    padding: 0;
+
+    input {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  // Textarea
+  .editorHolder .editor .editorContent {
+    border: 1px solid $border-thin-color;
+    border-radius: $border-radius;
+
+    textarea {
+      @include base-textarea;
+      @include placeholder {
+        color: $tertiary-color !important;
+      };
+      box-shadow: none;
+    }
+  }
+
+  // Add images/video input
+  .editorHolder .adds.attachments {
+    border-color: $input-border-color;
+
+    .imageUploader {
+      border-top: none;
+      padding: 20px;
+    }
+
+    // Image
+    #form_add_image .fileInputholder {
+      height: 35px;
+
+      .browseimage {
+        float: right;
+      }
+    }
+
+    #form_add_image .fileInputholder .fakeInput {
+      @include base-text-input;
+      border: 1px solid $border-thin-color;
+      width: 400px;
+      height: 35px;
+    }
+
+    #form_add_image .fileInputholder .fakeBTN,
+    #form_add_image .fileInputholder .fakeBTN:hover {
+      @include base-secondary-button($alternative:true);
+    }
+
+    // Add attachment text
+    .mediaHolder .mediaConnect .addToText {
+      line-height: $font-lineheight;
+    }
+
+    // Video
+    .videoInput {
+      @include base-text-input;
+      height: 35px;
+      width: 400px;
+      margin-right: 0;
+      border: 1px solid $border-thin-color;
+    }
+
+    #videoSubmit {
+      @include base-secondary-button($alternative: true);
+    }
+
+    // Poll
+    .pollTitle,
+    .pollItems li {
+      @include base-text-input;
+      padding: 0 10px;
+      height: 35px;
+
+      input{
+        @include base-text-input;
+        background: none;
+        color: $input-font-color;
+        border: 0;
+        box-shadow: none;
+        height: 33px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .deleteItem {
+        font-size: 0;
+        text-decoration: none;
+        line-height: 33px;
+
+        &:after {
+          content: "×";
+          font-size: $font-size-default;
+        }
+      }
+    }
+
+    .poll ul.pollItems li,
+    .pollTitle {
+      width: 467px;
+    }
+
+    .poll .deletePoll {
+      @include base-secondary-button;
+      height: 35px;
+      font-size: $font-size-default;
+      line-height: 36px;
+
+      &:hover {
+        height: 35px;
+        font-size: $font-size-default;
+        line-height: 36px;
+      }
+    }
+  }
+
+  // Add images/video buttons
+  .editorHolder {
+
+    // Progress bar
+    .adds .progressHolder {
+      padding: 10px 0 0;
+
+      #progressbar {
+        height: 16px;
+      }
+
+      .progressInfo {
+        margin: -4px 10px 0 10px;
+      }
+
+      .percent {
+        font-size: $font-size-extra-small;
+        line-height: 13px;
+      }
+
+      #progressbar .ui-progressbar-value {
+        height: 12px;
+      }
+    }
+
+    .editorFooter {
+      margin-top: 10px;
+      width: 100%;
+      float: right;
+    }
+
+
+    .editorAdds {
+      background: $color-white;
+      border: none;
+      border-radius: $border-radius;
+      min-height: 57px;
+      padding: 10px 0;
+      margin-bottom: 0;
+      width: 50%;
+      float: left;
+
+      .attachment_buttons {
+        float: left;
+      }
+
+      .addRight {
+        float: none;
+      }
+
+      .addLeft .editorBTN,
+      .addRight .editorBTN {
+        margin: 0 2px 0 0;
+      }
+
+      .editorBTN {
+        background: $color-timberwolf;
+        border: 0;
+        border-radius: $border-radius;
+        height: 45px;
+        min-width: 58px;
+        max-width: none;
+        width: auto;
+
+        div {
+          color: $tertiary-color;
+        }
+
+        &:hover,
+        &:active {
+          background: $primary-color;
+
+          div {
+            color: white;
+
+            &:after {
+                color: white;
+            }
+          }
+        }
+      }
+
+      .editorBTN div:hover,
+      .editorBTN div:hover:after {
+        color: white;
+      }
+
+      .addImage,
+      .addPoll,
+      .addVideo,
+      .addBB,
+      .addSmiley {
+        min-width: 50px;
+        max-width: none;
+        width: auto;
+        background: none;
+        text-indent: 0;
+        height: 35px;
+        line-height: 32px;
+        text-align: center;
+        text-shadow: none;
+
+        &:after {
+          @include insided-icon;
+          display: inline;
+          color: $tertiary-color;
+          line-height: 1;
+          position: relative;
+          top: 6px;
+          font-size: $font-size-large;
+          vertical-align: middle;
+        }
+      }
+
+      .addPoll {
+        line-height: 34px;
+
+        &:after {
+          line-height: 23px;
+        }
+      }
+
+      .addImage span,
+      .addVideo span {
+        position: relative;
+        color: $tertiary-color;
+        padding: 2px 7px 0 0;
+        float: right;
+        line-height: 43px;
+
+        &:empty {
+          display: none;
+        }
+      }
+
+      #btn_add_image div:after {
+        content: $insided-icon-05;
+      }
+      #btn_add_video div:after {
+        content: $insided-icon-06;
+      }
+      #btn_add_poll  div:after {
+        content: $insided-icon-37;
+      }
+      .addSmiley:after {
+        content: $insided-icon-07;
+      }
+      .addBB:after {
+        content: $insided-icon-08;
+      }
+    }
+  }
+
+  // Add Smiley
+  .editorHolder .smileyPopup {
+    margin-right: 9px;
+
+    .popupInfo {
+      border-radius: $border-radius;
+    }
+  }
+
+  // Add right
+  .addRight {
+    vertical-align: middle;
+    line-height: 35px;
+  }
+
+  // Question or not
+  .questionHolder {
+    float: left;
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  // Cancel
+  .cancel {
+    text-decoration: none;
+    @include clearfix;
+    display: block;
+    text-align: right;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Submit
+  #post_submit {
+    float: right;
+    @include base-secondary-button;
+    margin-bottom: 10px;
+  }
+
+  // Editor tags
+  .editorTags {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    clear: both;
+
+    .tagDesc {
+      line-height: 36px;
+    }
+
+    span.tag {
+      border-radius: 2px;
+      color: $meta-font-color;
+      font-weight: bold;
+      height: 25px;
+      line-height: 1;
+      margin: 0 10px 10px 0;
+      padding: 5px 10px;
+      cursor: default;
+    }
+
+    span.tag .delete {
+      float: right;
+      font-size: 0;
+      text-decoration: none;
+      margin: 0;
+
+      &:after {
+        content: "×";
+        font-size: $font-size-default;
+        margin-left: 8px;
+      }
+    }
+
+    .inputTag input {
+      height: 35px;
+      width: 170px;
+    }
+
+    span.addTag {
+      @include base-button;
+      text-indent: 0;
+      width: auto;
+      height: 25px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.create_message .editorAdds,
+.create_message .editorFooter {
+  width: 50%;
+}
+.create_message .editorAdds {
+  float: left;
+}
+.create_message .editorFooter {
+  float: right;
+  margin-top: 10px;
+}
+
+
+#createPost.editor_container.create_post {
+
+  .editorFooter {
+    margin-top: 1px;
+    padding: 10px 0;
+    width: 50%;
+    float: right;
+  }
+
+  // Submit
+  #post_submit {
+    @include base-secondary-button;
+  }
+}
+
+#createPost .editorAdds {
+  float: left;
+  width: 50%;
+}
+
+.display .inputTag {
+  margin-bottom: 10px;
+}
+
+.firstPost.display .editorTags .inputTag input {
+  height: 35px;
+  width: 120px;
+}
+
+.editor_container .editorHolder .editor .editorContent textarea::placeholder {
+  color:red;
+}

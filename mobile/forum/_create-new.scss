@@ -1,0 +1,47 @@
+.new #pageTitle h1 {
+ float: none;
+}
+
+
+.cb-bg .switch-bg {
+  box-shadow: none;
+}
+
+.cb-bg .switch-bg.on-bg {
+  @include prefix(transform, rotate(0deg), webkit moz ms o);
+  background-image: linear-gradient($secondary-color, $secondary-color);
+}
+
+
+.new .questionSwitch {
+  margin-top: 20px;
+  float: none;
+
+  .labelSwitch {
+    color: $color-white;
+    font-weight: bold;
+  }
+}
+
+.new .forumSelector,
+.new .title,
+.new .content {
+  padding-left: 20px;
+  border-bottom: 1px solid $border-thin-color;
+}
+
+.new .forumSelector select {
+  padding-left: 0;
+}
+
+.new .content textarea {
+  min-height: 100px;
+}
+
+.new .submitBox {
+  padding-top: 20px;
+
+  .btn.blue {
+    @include base-secondary-button;
+  }
+}

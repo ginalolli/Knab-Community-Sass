@@ -1,0 +1,55 @@
+.titleContent {
+  padding: 18px 20px;
+}
+
+.titleContent .CTA.newTopic,
+.listingBoxFooter .CTA {
+  @include base-secondary-button($alternative:true);
+  line-height: 38px;
+
+  &:hover {
+    line-height: 36px;
+  }
+}
+
+.container.activities h2 {
+  padding: 12px 20px;
+  color: $tertiary-color;
+  border-bottom: 1px solid $border-thin-color;
+}
+
+.contentActivity .titleHeader {
+  height: 45px;
+}
+
+.activities .activity {
+  padding: 18px 20px;
+  border-bottom-color: $border-thin-color;
+
+  .activityContent {
+
+    .username {
+      color: $link-font-color;
+    }
+
+    .mention,
+    .time {
+      color: $meta-font-color;
+    }
+  }
+
+  .content {
+
+    h4 {
+      margin-bottom: 6px;
+    }
+
+    .activityLink {
+      color: $link-font-color;
+    }
+  }
+
+  &.lastChild {
+    border-bottom: none;
+  }
+}

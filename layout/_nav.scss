@@ -1,0 +1,222 @@
+// Fix default
+#header,
+#footer {
+  height: auto;
+}
+
+.headerTop {
+  position: relative;
+  z-index: $zindex-medium;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: $tertiary-color;
+
+    &:hover {
+      color: $link-font-color-hover;
+    }
+  }
+
+  .logo {
+    width: 70px;
+    height: 50px;
+    float: left;
+
+    img {
+      margin-left: 0;
+      width: 70px;
+      height: 50px;
+    }
+  }
+
+  .mainNavWrapper  {
+    background-color: $color-white;
+  }
+
+  .secondaryNavWrapper {
+    background-color: $color-wheat;
+  }
+
+  .mainNavWrapper .wrapper {
+    position: relative;
+    height: 50px;
+  }
+
+  #mainNav {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+    right: 0;
+    float: right;
+
+    a {
+      padding: 0 9px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .lastChild a {
+      padding: 18px 20px;
+      background-color: $primary-color;
+      color: $color-white;
+
+      &:hover {
+        text-decoration: none;
+        background-color: shade(#e14c68, 10%);
+      }
+    }
+  }
+}
+
+.secondaryNavWrapper .wrapper {
+  position: relative;
+  height: 50px;
+
+  #secondaryNav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+    z-index: $zindex-medium;
+    left: 0;
+    font-weight: bold;
+
+    .menu {
+      float: left;
+
+      li {
+        display: inline-block;
+
+        &.firstChild {
+          position: relative;
+
+          a {
+            padding: 0;
+            // color: $primary-color;
+          }
+        }
+
+        .dropdown {
+          display: inline-block;
+          vertical-align: middle;
+          width: 8px;
+          height: 4px;
+          margin-left: 0.3em;
+          cursor: pointer;
+          background: url('#{$assets}images/dropdown-arrow.png') no-repeat 0 0;
+        }
+
+        a {
+          text-align: left;
+          padding: 0 15px;
+          color: $color-river-bed;
+          font-size: $font-size-mid;
+          white-space: nowrap;
+          position: relative;
+          z-index: 2;
+          &:active,
+          &.active,
+          &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            color: $link-font-color;
+            + .dropdown {
+              background-position: 0px -5px;
+            }
+          }
+        }
+      }
+    }
+
+    .active {
+      width: auto;
+      position: relative;
+      color: $link-font-color;
+      font-weight: bold;
+      z-index: $zindex-max;
+
+      &:before {
+        position: absolute;
+        top: 28px;
+        left: 50%;
+        margin-left: -12px;
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 11px solid $color-wheat;
+      }
+    }
+
+    .subMenu {
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: -40px;
+      padding: 36px 0 0 0;
+      width: 136px;
+
+
+      li {
+        padding: 0px 15px;
+        display: block;
+        background-color: $tertiary-color;
+
+        &.lastChild a {
+          border: 0;
+        }
+
+        a {
+          font-weight: normal;
+          color: $color-white !important; //to override the main ul rule
+          border-bottom: 1px solid $color-athens;
+          display: block;
+          padding: 12px 0 !important;
+
+          &.active {
+            font-weight: normal;
+            color: $link-font-color !important;
+
+            &:before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+
+    .firstChild a {
+      padding-left: 0;
+    }
+  }
+}
+
+#secondaryNav .community {
+    float: right;
+
+    a {
+    color: $color-river-bed;
+    padding: 0;
+    font-size: $font-size-mid;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}
+
+.secondaryNavWrapper .wrapper #secondaryNav .menu li.active-menu-list .dropdown {
+  background-position: bottom left;
+}
